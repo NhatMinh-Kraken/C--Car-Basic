@@ -1,0 +1,81 @@
+﻿@model DoAnBanXe.Models.DoChoiXe
+
+@{
+    ViewBag.Title = "Chi Tiết Phụ Kiện";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    img {
+        width: 100px;
+        height: auto;
+    }
+
+    hr {
+        border-top: 2px solid #000000;
+    }
+
+    .khung {
+        text-align: center;
+    }
+</style>
+
+<h2 style="text-align:center">CHI TIẾT PHỤ KIỆN</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Loại Phụ Kiện:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoaiDoChoiXe.TenLoaiDC)
+        </dd>
+        <hr />
+        <dt>
+            Tên Phụ Kiện:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenDC)
+        </dd>
+        <hr />
+        <dt>
+            Giá bán:
+        </dt>
+        <dd>
+            @Html.FormatValue(@Model.GiaDC, "{0:#,##0}") VNĐ
+        </dd>
+        <hr />
+        <dt>
+            Ảnh Sản Phẩm:
+        </dt>
+        <dd>
+            <img src="~/image/@Model.AnhDC" alt=" @Model.TenDC">
+        </dd>
+        <hr />
+        <dt>
+            Mô tả:
+        </dt>
+        <dd>
+            @Html.Raw(@Model.MoTa.ToString().Replace("\n",
+           "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+        </dd>
+        <hr />
+        <dt>
+            Ngày cập nhật:
+        </dt>
+        <dd>
+            @Html.FormatValue(@Model.NgayCapNhat, "{0:dd/MM/yyyy}")
+        </dd>
+        <hr />
+
+
+
+    </dl>
+</div>
+<div class="khung">
+    <p>
+        @Html.ActionLink("Sửa", "EditDC", new { id = Model.MaDC }) |
+        @Html.ActionLink("VỀ TRANG QUẢN LÝ Phụ Kiện", "QLDCX", "Xe")
+    </p>
+</div>

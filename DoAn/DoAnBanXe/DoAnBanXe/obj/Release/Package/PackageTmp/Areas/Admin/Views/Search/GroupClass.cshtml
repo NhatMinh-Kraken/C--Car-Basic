@@ -1,0 +1,63 @@
+﻿@model IEnumerable<IGrouping<int?, DoAnBanXe.Models.Xe>>
+
+@{
+    ViewBag.Title = "Quản Lý Class";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+
+    .group-class {
+        text-align: center;
+    }
+
+        .group-class td {
+            color: aliceblue;
+            text-align: center;
+            width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    hr {
+        border: 0px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+</style>
+
+<h2>DANH SÁCH XE THEO CLASS</h2>
+
+
+@foreach (var item in Model)
+{
+    <div class="group-class">
+        <h4 style="font-weight:bold; color:#0026ff;">Mã Class @item.Key</h4>
+        <table border="1">
+            <tr style="background-color:#000000; font-weight:bold;">
+                <td>Mã XE</td>
+                <td>Tên XE</td>
+                <td>Mã CLASS</td>
+            </tr>
+            @foreach (var xe in item)
+            {
+                <tr>
+                    <td>
+                        @xe.MaXe
+                    </td>
+                    <td>@xe.TenXe</td>
+                    <td>@xe.Class.TenClass</td>
+                </tr>
+            }
+        </table>
+        <hr />
+    </div>
+}
+
+

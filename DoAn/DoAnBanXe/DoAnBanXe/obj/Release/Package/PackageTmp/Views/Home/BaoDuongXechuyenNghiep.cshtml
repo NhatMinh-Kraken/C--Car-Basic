@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewBag.Title = "Bảo Dưỡng Xe Chuyên Nghiệp";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style type="text/css">
+    .anh img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .anh1 img {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .h4 {
+        text-align: center;
+    }
+
+    hr {
+        border-top: 0px;
+    }
+
+    /*Bản đồ */
+
+    .googlemap {
+        position: relative;
+    }
+
+    .inf_lienhe {
+        position: absolute;
+        z-index: 1;
+        background: transparent linear-gradient(270deg, #ffffff1f 0%, #fffffff2 23%, white 100%) 0% 0% no-repeat padding-box;
+        left: 0;
+        top: 0;
+        padding: 5.5%;
+        padding-left: 15%;
+        max-height: 350px;
+    }
+
+    .left_1hngay h4 {
+        margin-bottom: 20px;
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .left_1hngay p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .tieude {
+        position: absolute;
+        top: 2%;
+        color: #0026ff;
+        letter-spacing: .05em;
+        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<div class="tieude text-center">
+    <h3>
+        <b> Quy trình bảo dưỡng xe ô tô Mercedes-Benz có gì đặc biệt?</b>
+        <hr />
+        <i>Chúng ta cùng tìm hiểu nào </i>
+    </h3>
+</div>
+<div class="BaoDuong">
+
+    <div class="anh">
+        <img src="~/image/baoduong.png" />
+    </div>
+    <hr>
+    <div class="container">
+        <div class="text-baoduong">
+            <h4>
+                “Của bền tại người”, việc bảo dưỡng xe Mercedes-Benz đúng quy cách, đúng lịch trình không chỉ
+                đảm bảo tính an toàn khi vận hành mà còn giúp tăng tuổi thọ sử dụng xe. Ngoài ra, chăm sóc xế
+                sang định kỳ còn giúp cắt giảm các chi phí sửa
+                chữa, thay mới nhờ phát hiện sớm các dấu hiệu bất thường nên có biện pháp ngăn chặn những hư
+                hỏng nghiêm trọng kịp thời. Vậy quy trình bảo dưỡng xe ô tô Mercedes-Benz định kỳ gồm những gì?
+                Cần lưu ý gì khi bảo dưỡng xe?
+            </h4>
+        </div>
+
+        <hr>
+        <div class="cacbuocbaoduong">
+            <div class="buoc1">
+                <h3>
+                    <b>1. Quy trình bảo dưỡng xe ô tô Mercedes-Benz gồm những gì?</b>
+                </h3>
+                <h4>
+                    Quy trình bảo dưỡng xe Mercedes-Benz được chia làm 2 kỳ là A và B với các hạng mục như: kiểm
+                    tra, vệ sinh, sửa chữa và thay mới. Cả 2 kỳ bảo dưỡng này đều được áp dụng cho tất cả các
+                    dòng xe Mercedes-Benz, thực hiện xen kẽ nhau. Tuy nhiên, tùy vào dòng
+                    xe và thời gian sử dụng xe mà các hạng mục bảo dưỡng được thực hiện có thể là khác nhau.
+                </h4>
+                <h4>
+                    Thời gian thực hiện luân phiên giữa 2 kỳ bảo dưỡng này là 12 tháng hoặc sau khi xe đã vận
+                    hành khoảng 8.000 km. Cụ thể, nếu bạn vừa thực hiện xong kỳ bảo dưỡng A thì sau 12 tháng
+                    (hoặc 8.000 km), bạn sẽ thực hiện kỳ bảo dưỡng B và ngược lại.
+                </h4>
+                <hr>
+                <div class="anh1">
+                    <img src="~/image/baoduong1,2.png">
+                </div>
+                <hr>
+                <h4>
+                    Khi sở hữu các mẫu xe Mercedes-Benz, các thông tin bảo dưỡng sẽ hiển thị chi tiết trên hệ
+                    thống xe. Nhờ đó bạn không cần phải ghi nhớ mình đã thực hiện kỳ bảo dưỡng nào, khi nào đến
+                    kỳ bảo dưỡng tiếp theo, đâu là bộ phần cần thay mới
+                    trong kỳ bảo dưỡng sắp tới… Đây chính là một trong những ưu điểm nổi bật, giúp chủ nhân xe
+                    có thể chủ động hơn trong việc chăm sóc chiếc xế yêu của mình.
+                </h4>
+
+            </div>
+            <div class="buoc2">
+                <h3>
+                    <b>2. Những lưu ý về quy trình bảo dưỡng xe Mercedes-Benz cần ghi nhớ</b>
+                </h3>
+                <h4>
+                    - Khi nào nên bảo dưỡng xe ngay lập tức?
+                </h4>
+                <h4>
+                    Với nhiều lợi ích mang lại, chủ nhân xe nên chủ động bảo dưỡng xe đúng định kỳ để luôn tự
+                    tin khi cầm lái. Tuy nhiên, nếu xe xuất hiện các dấu hiệu sau, bạn cần mang xe đi kiểm tra
+                    càng sớm càng tốt cho dù chưa đến thời gian bảo dưỡng.
+                    Bởi đây là những dấu hiệu hư hỏng nặng, nếu không được khắc phục kịp thời có thể gây ảnh
+                    hưởng tới sự an toàn của tất cả hành khách.
+                </h4>
+                <li> Xe bị rung giật khi chạy.</li>
+                <li>Xe có tiếng ồn lạ, tiếng rít hoặc gầm khi chạy.</li>
+                <li>Động cơ xe trở nên ì ạch, công suất yếu dần và không ổn định.</li>
+                <li>Bạn gặp khó khăn trong điều khiển xe, vô lăng bị lệch, mất cảm giác lái.</li>
+                <li>Xe nổi đèn báo check trên taplo.</li>
+                <li>Các chất lỏng bên trong xe như dầu nhớt, xăng bị rò rỉ ra bên ngoài.</li>
+                <hr>
+                <div class="anh1">
+                    <img src="~/image/baoduong2.bng.jpg">
+                </div>
+                <hr>
+                <h4>- Bảng giá bảo dưỡng xe Mercedes-Benz</h4>
+                <h4>
+                    Chi phí bảo dưỡng xe Mercedes-Benz luôn là một dấu chấm hỏi lớn cho những ai đang có dự định
+                    sở hữu xe Mercedes-Benz. Hiện nay, tại hầu hết các xưởng dịch vụ chính hãng Mercedes-Benz
+                    Vietnam Star đều công khai mức giá bảo dưỡng xe
+                    cho từng hạng mục khá rõ ràng. Bạn có thể mang xe đến trực tiếp các xưởng dịch vụ để kiểm
+                    tra. Tùy vào từng hạng mục cần thực hiện mà nhân viên sẽ báo giá chi tiết nhất cho bạn.
+                </h4>
+                <hr>
+                <div class="anh1">
+                    <img src="~/image/baoduong2,1.png">
+                </div>
+                <hr>
+                <h4>- Địa chỉ bảo dưỡng xe Mercedes-Benz </h4>
+                <h4>
+                    Để đảm bảo chất lượng các hạng mục bảo dưỡng cũng như chất lượng phụ tùng, tốt nhất bạn nên
+                    lựa chọn các địa chỉ bảo dưỡng xe Mercedes-Benz uy tín. Theo đó, bạn nên lựa chọn các đại lý
+                    chính hãng Mercedes-Benz bởi tại đây cam kết 100%
+                    phụ tùng thay thế, dầu nhớt chính hãng cũng như có chính sách bảo hành cụ thể.
+                </h4>
+            </div>
+            <div class="buoc3">
+                <h3>
+                    <b>
+                        3. Trải nghiệm quy trình bảo dưỡng xe ô tô Showroom Mercedes-Benz Vietnam Star Trường
+                        Chinh
+                    </b>
+                </h3>
+                <h4>
+                    Vietnam Star Automobile là một trong những đại lý chính hãng Mercedes-Benz tại thị trường
+                    Việt Nam. Thành lập vào năm 2005, đến nay Vietnam Star sở hữu hệ thống 08 showroom trên toàn
+                    quốc, cung cấp tất cả các dòng xe Mercedes-Benz
+                    cũng như các dịch vụ bảo dưỡng, sửa chữa và thay mới phụ tùng.
+                </h4>
+                <h4>
+                    Quy trình bảo dưỡng xe ô tô Mercedes-Benz tại Vietnam Star được xây dựng theo các tiêu chuẩn
+                    Mercedes-Benz toàn cầu, dưới sự hỗ trợ của các trang thiết bị, máy móc, công nghệ hiện đại,
+                    chuyên dụng của hãng. Ngoài ra, với đội ngũ kỹ
+                    thuật viên lành nghề, được đào tạo chuyên sâu, bạn có thể an tâm về chất lượng dịch vụ khi
+                    lựa chọn bảo dưỡng xe tại đây.
+                </h4>
+                <h4>
+                    Đặc biệt, bảng giá bảo dưỡng, sửa chữa và thay dầu nhớt hoặc phụ tùng tại Vietnam Star đều
+                    được niêm yết rõ ràng, minh bạch, không phát sinh các khoản phí bất thường. Khi mang xe đến,
+                    nhân viên sẽ tiếp nhận yêu cầu của bạn, kiểm tra
+                    xe, tư vấn các hạng mục bảo dưỡng và sửa chữa cần thiết. Sau đó, nhân viên sẽ báo giá chi
+                    tiết với khách hàng và chỉ tiến hành bảo dưỡng, sửa chữa khi nhận được sự đồng ý của khách
+                    hàng.
+                </h4>
+                <hr>
+                <div class="anh">
+                    <img src="~/image/mercedes congty .png">
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="googlemap">
+    <div class="bando ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d872.8437594700126!2d106.63133717652606!3d10.816207491619371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529605102eff1%3A0x1c6a74eb5ff828e!2zMiBUcsaw4budbmcgQ2hpbmgsIFTDonkgVGjhuqFuaCwgVMOibiBQaMO6LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1622604673624!5m2!1svi!2s"
+                width="100%" height="350px" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <div class="inf_lienhe">
+        <div class="left_1hngay">
+            <h4>
+                LIÊN HỆ
+            </h4>
+            <p>| Add: 02 Trường Chinh, phường Tây Thạnh, quận Tân Phú, tp Hồ chí Minh</p>
+            <p>| Tel: 0904113747</p>
+            <p>| Mail: mercedeshochiminh59@gmail.com</p>
+            <p>| NamePR: Nguyễn Nhật Minh-D19PM02-1924801030219 </p>
+        </div>
+    </div>
+</div>
+

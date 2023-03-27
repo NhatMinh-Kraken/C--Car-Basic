@@ -1,0 +1,109 @@
+﻿@using DoAnBanXe.Models
+@model DoAnBanXe.Models.ADMIN
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin</title>
+    <link rel="SHORTCUT ICON" href="~/image/icon.ico">
+    <link href="~/Content/structure.css" rel="stylesheet" />
+
+    <style type="text/css">
+
+        .box.login {
+            height: 300px;
+            width: 344px;
+            position: absolute;
+            left: 75%;
+            top: 50%;
+            margin: -130px 0 0 -166px;
+            border-radius: 17px;
+        }
+
+        .box footer {
+            padding: 30px 1px;
+            height: auto;
+        }
+
+        button, input, select, textarea {
+            border-radius: 20px;
+            outline: 0 !important;
+        }
+
+            input[type="submit"]:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+            input[type="submit"]:active {
+                background-color: /*rgb(91 89 89 / 0.51)*/ #ffffff82;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+
+        body {
+            height: 100%;
+            margin: 0px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div>
+        <img src="~/image/banner admin 6.png" />
+    </div>
+    <form action="~/Admin/HomeAdmin/Login" method="post" class="box login">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(false)
+            if (Request.Cookies["UserName"] != null && Request.Cookies["MatKhau"] != null)
+            {
+                <fieldset class="boxBody">
+                    <h4 style="text-align:center;font-weight:bold">LOGIN ADMIN</h4>
+                    <label>Username</label>
+                    @Html.TextBox("UserName", Request.Cookies["UserName"].Value)
+                    <label>
+                        Password
+                    </label>
+                    @Html.Password("Password", Request.Cookies["Password"].Value)
+                    <p style="font-style:italic; color:red; margin:0px;">@ViewBag.ThongBao</p>
+                </fieldset>
+            }
+            else
+            {
+                <fieldset class="boxBody">
+                    <h4 style="text-align:center;font-weight:bold">LOGIN ADMIN</h4>
+                    <label>Username</label>
+                    @Html.TextBox("UserName")
+                    <label>
+                        Password
+                    </label>
+                    @Html.Password("Password")
+                    <p style="font-style:italic; color:red; margin:0px;">@ViewBag.ThongBao</p>
+                </fieldset>
+            }
+            <footer>
+                @*<label><input type="checkbox" tabindex="3">Keep me logged in</label>*@
+                <td>
+                    @Html.CheckBox("remember")<span style="font-style:italic">Nhớ Thông Tin Đăng Nhập</span>
+                </td>
+                <input type="submit" class="btnLogin" value="Login" tabindex="4">
+            </footer>
+
+        }
+    </form>
+
+</body>
+</html>

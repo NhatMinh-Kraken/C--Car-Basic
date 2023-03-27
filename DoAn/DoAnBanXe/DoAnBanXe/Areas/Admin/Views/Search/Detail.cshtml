@@ -1,0 +1,79 @@
+﻿@model DoAnBanXe.Models.Xe
+
+@{
+    ViewBag.Title = "Chi Tiết";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    img {
+        width: 100px;
+        height: auto;
+    }
+
+    hr {
+        border-top: 2px solid #000000;
+    }
+
+    .khung {
+        text-align: center;
+    }
+</style>
+
+<h2 style="text-align:center">CHI TIẾT SÁCH</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Loại Xe:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Class.TenClass)
+        </dd>
+        <hr />
+        <dt>
+            Tên Xe:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenXe)
+        </dd>
+        <hr />
+        <dt>
+            Ảnh bìa:
+        </dt>
+        <dd>
+            <img src="~/image/@Model.AnhBia" alt=" @Model.TenXe">
+        </dd>
+        <hr />
+        <dt>
+            Ngày cập nhật:
+        </dt>
+        <dd>
+            @Html.FormatValue(@Model.NgayCapNhat, "{0:dd/MM/yyyy}")
+        </dd>
+        <hr />
+        <dt>
+            Giá bán:
+        </dt>
+        <dd>
+            @Html.FormatValue(@Model.GiaXe, "{0:#,##0}") VNĐ
+        </dd>
+        <hr />
+        <dt>
+            Mô tả:
+        </dt>
+        <dd>
+            @Html.Raw(@Model.MoTa.ToString().Replace("\n",
+           "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+        </dd>
+        <hr />
+
+    </dl>
+</div>
+<div class="khung">
+    <p>
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.MaXe }) |
+        @Html.ActionLink("VỀ TRANG QUẢN LÝ XE", "Index", "Xe")
+    </p>
+</div>

@@ -1,0 +1,14 @@
+﻿<option value="">--Select State--</option>
+@if (ViewBag.XeOptions != null)
+{
+
+    foreach (var item in ViewBag.XeOptions)
+    {
+
+        <option value="@item.Value">@item.Text </option>
+
+    }
+
+}
+
+

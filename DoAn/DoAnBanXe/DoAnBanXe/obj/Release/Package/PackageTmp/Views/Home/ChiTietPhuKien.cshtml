@@ -1,0 +1,221 @@
+﻿@using DoAnBanXe.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<ChiTietPhuKien>
+
+
+@{
+    ViewBag.Title = "ChiTietPhuKien";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style type="text/css">
+
+    div#wapper {
+        margin: auto;
+        width: 100%;
+        background: #000;
+    }
+
+    .text-left {
+        color: #ffffff;
+    }
+
+    hr {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0px;
+        border-top: 0px solid #ffffff;
+    }
+
+    .aem-grid-stage {
+        height: 100%;
+        position: absolute;
+        top: 100px;
+    }
+
+    .stage_hl {
+        color: #ffffff;
+    }
+
+    p {
+        margin: 0px 20px 10px;
+    }
+
+    .h5,
+    h5 {
+        font-size: 14px;
+        margin: 0px 10px 10px;
+    }
+
+    .anh img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    .video_left {
+        width: 44%;
+        float: left;
+        position: relative;
+        margin: 10px;
+    }
+
+    .title-haudai {
+        color: #ffffff;
+        font-family: 'Cabin-bold';
+        padding: 10px 0px;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .video_right {
+        text-align: left;
+    }
+
+        .video_right ul {
+            padding-top: 10px;
+            width: 40%;
+            float: right;
+            text-align: left;
+            list-style: none;
+        }
+
+        .video_right li {
+            padding: 5px;
+            font-family: 'cabin';
+            font-size: 18px;
+        }
+
+        .video_right ul li {
+            padding-left: 35px;
+        }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+</style>
+
+<div class="container text-left">
+    <div class="aem-grid-stage">
+        <h3 class="stage-headline">
+            <div class="stage_hl">
+                <p>Phụ Tùng - Chính Hãng</p>
+                <h5>Hãy sử dụng phụ tùng chính hãng cho Mercedes của bạn.</h5>
+            </div>
+        </h3>
+    </div>
+    <div class="">
+        <div class="anh">
+            <img src="~/image/banner-mercedes-benz.png">
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="contentpager container">
+    <div class="aem-grid-content">
+        <div class="productpageheadline">
+            <div class="productpageheadline_inner">
+                <div class="productpageheadline__headline text-left">
+                    <u>Phụ tùng chính hãng</u>
+                </div>
+                <h2 class="productpageheadline_topic text-left">Chất lượng cao nhất cho hiệu suất tối ưu.</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="haudai">
+        <div class="box-haudai">
+            <div class="video_left">
+                <video controls>
+                    <source src="~/image/We test for your safety MercedesBenz GenuineParts  MercedesBenz original_1080p.mp4">
+                </video>
+            </div>
+            <div class="video_right">
+                <div class="title-haudai">
+                    <h3>Hoàn hảo trên từng góc cạnh.</h3>
+                    <hr>
+                    <h4>Nhờ các thông số chính xác của nhà sản xuất và hệ thống kiểm tra toàn diện, các phụ tùng chính hãng Mercedes-Benz luôn được cập nhật công nghệ mới nhất. Khái quát các lợi ích của bạn:</h4>
+                    <hr>
+                    <h4><i class="bi bi-check">Chất lượng xuất sắc, độ an toàn và tin cậy đã được kiểm nghiệm.</i></h4>
+                    <h4><i class="bi bi-check">Được phát triển đặc biệt cho xe của bạn.</i></h4>
+                    <h4><i class="bi bi-check">Lựa chọn tốt nhất về đặc tính vận hành, độ tiện nghi và bảo tồn giá trị của xe.</i></h4>
+                    <h4><i class="bi bi-check">Tuổi thọ và tỉ lệ giữa hiệu suất và giá tuyệt vời.</i></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="contentpager container">
+    <div class="aem-grid-content">
+        <div class="productpageheadline">
+            <div class="productpageheadline_inner">
+                <div class="productpageheadline__headline text-left">
+                    <u>Phụ tùng chính hãng nổi bật</u>
+                </div>
+                <h2 class="productpageheadline_topic text-left">Đem đến chất lượng tuyệt vời, an toàn tối đa và độ tin cậy cao.</h2>
+                <hr>
+                <h4>
+                    <font color="#ffffff">
+                        Phụ tùng chính hãng Mercedes-Benz được phát triển dành riêng cho xe Mercedes và do đó luôn là lựa chọn hàng đầu để duy trì giá trị, sự tiện nghi và các tính chất vốn có của xe. Hơn nữa, sự bền bỉ và chất lượng nổi bật khiến
+                        cho phụ tùng chính hãng Mercedes-Benz vượt trên cả những gì khách hàng kỳ vọng.
+                    </font>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+@Html.Action("PhuKienPartial", "Home")
+
+<hr />
+
+<div class="PhuTung container">
+    @*<div class="container">*@
+    @foreach (var chitietphukien in Model)
+    {
+        <hr />
+        <div class="haudai">
+            <div class="box-haudai">
+                <hr />
+                <h3>
+                    <font color="#ffffff">@chitietphukien.TenPhukien</font>
+                </h3>
+                <div class="video_left">
+                    <video controls width="300px" , height="300px">
+                        <source src="~/image/@chitietphukien.AnhPhuKien">
+                    </video>
+                </div>
+                <div class="video_right">
+                    <div class="title-haudai">
+                        <h3>@chitietphukien.MoTa1</h3>
+                        <hr>
+                        <h4><i class="bi bi-check">@chitietphukien.Mota2</i></h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
+@*</div>*@
+<hr />
+<div class="container">
+
+    <div class="MenuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("ChiTietPhuKien", new { MaPhuKien = ViewBag.MaClass, page = page }))
+    </div>
+</div>
+<style>
+    .MenuTrang {
+        display: inline;
+        text-align: center;
+    }
+</style>
+

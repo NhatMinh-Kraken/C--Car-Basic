@@ -1,0 +1,127 @@
+﻿@model IEnumerable<DoAnBanXe.Models.Xe>
+
+@{
+    ViewBag.Title = "Thêm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    h2 {
+        text-align: center;
+    }
+
+    .form-horizontal {
+        padding-left: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        padding-left: 35%;
+    }
+
+    button, input, select, textarea {
+        outline: 0 !important;
+    }
+
+        button[type="submit"]:hover {
+            border-radius: 20px;
+            background-color: #0094ff;
+            color: #fff;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        button[type="submit"]:active {
+            background-color: rgb(91 89 89 / 0.51) #0ff;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+    .khung {
+        max-width: 100%;
+        padding: 15px;
+        padding-bottom: 110px;
+    }
+
+    .QLxe {
+        text-align: center;
+    }
+</style>
+<div class="khung">
+    <h2>SẢN PHẨM CẦN THÊM</h2>
+
+    @*Thêm thuộc tính cho form để upload ảnh*@
+    @using (Html.BeginForm("Create", "Search", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Loại Xe</label>
+                <div class="col-md-10">
+                    <input type="text" size="70" name="sLoaiXe" value="@ViewBag.loaiXe" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Tên Xe</label>
+                <div class="col-md-10">
+                    <input type="text" size="70" name="sTenXe" value="@ViewBag.TenXe" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Gía Bán</label>
+                <div class="col-md-10">
+                    <input type="number" min="1" required name="mGiaXe"
+                           value="@ViewBag.GiaXe" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Ảnh Sản Phẩm</label>
+                <div class="col-md-10">
+                    <input type="file" name="fFileUpload" />
+                    @*Thông báo lỗi yêu cầu phải chọn ảnh bìa*@
+                    @ViewBag.ThongBao
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Mô Tả</label>
+                <div class="col-md-10">
+                    <textarea name="sMoTa">@ViewBag.MoTa</textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Ngày Cập Nhật</label>
+                <div class="col-md-10">
+                    <input type="date" name="dNgayCapNhat" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Mã Loại Xe</label>
+                <div class="col-md-10">
+                    @*Hiển thị ViewBag.MaCD vào dropdownlist*@
+                    @Html.DropDownList("MaClass")
+                </div>
+            </div>
+
+            <div class="form-group submit">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-cloud-upload"></span> Add New</button>
+                </div>
+            </div>
+        </div>
+    }
+    <hr />
+    <div class="QLxe">
+        @Html.ActionLink("VỀ TRANG QUẢN LÝ XE", "Index", "Xe")
+    </div>
+</div>

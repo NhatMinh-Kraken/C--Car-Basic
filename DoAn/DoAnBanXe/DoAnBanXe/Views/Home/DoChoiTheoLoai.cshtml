@@ -1,0 +1,187 @@
+﻿@using DoAnBanXe.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DoChoiXe>
+
+@{
+    ViewBag.Title = "Đồ Chơi Xe";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<style type="text/css">
+    div#wapper {
+        margin: auto;
+        width: 100%;
+        background: #d5d5d5;
+    }
+
+
+    .aem-grid-stage {
+        position: absolute;
+        top: 7%;
+        letter-spacing: .05em;
+        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+        left: 2%;
+    }
+
+    .stage_hl {
+        color: rgb(255 106 0);
+    }
+
+    p {
+        margin: 0px 20px 10px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    /* .thumbnail {
+        margin: 5px;
+        padding-top: 10px;
+        height: 300px;
+        display: block;
+    }*/
+
+    .thumbnail_zoom {
+        margin: 5px;
+        padding-top: 10px;
+        height: 350px;
+        display: block;
+        padding: 10%;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: all 1s ease;
+    }
+
+        .thumbnail_zoom:hover img {
+            transform: scale(1.5, 1.5);
+            -webkit-transform: scale(1.5, 1.5);
+            -moz-transform: scale(1.5, 1.5);
+            -o-transform: scale(1.5, 1.5);
+            -ms-transform: scale(1.5, 1.5);
+        }
+
+
+    .caption {
+        height: 125px;
+        padding-right: 1px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        text-align: center;
+    }
+
+    .anh img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .col-lg-3 {
+        left: 0%;
+        padding-right: 30px;
+        position: fixed;
+        top: 10px;
+        position: sticky;
+        z-index: 999998;
+    }
+
+    .col-lg-4 {
+        width: 32.333333%
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    .row {
+        margin-right: 0px;
+        margin-left: -15px;
+    }
+
+    h2 {
+        letter-spacing: .05em;
+        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+
+<div class="">
+    <div class="aem-grid-stage  text-left">
+        <h3 class="stage-headline">
+            <div class="stage_hl">
+                <p>Phụ Kiện Chính Hãng</p>
+                <h5>Hãy sử dụng phụ kiện chính hãng cho Mercedes của bạn.</h5>
+            </div>
+        </h3>
+    </div>
+    <div class="">
+        <div class="anh">
+            <img src="~/image/banner Phu Kien 001 .png">
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<div class="row">
+    <h2 class="text-center">
+        <font color="#ff006e">
+            Phụ Kiện Xe Phổ Biến Nhất
+        </font>
+    </h2>
+    <hr>
+    <div class="row ">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            @Html.Action("LoaiDoChoiPartial", "Home")
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            @foreach (var dcx in Model)
+            {
+                <div class="col-lg-4 col-md-4">
+                    <div class="thumbnail_zoom ">
+                        <img src="~/image/@dcx.AnhDC" alt="@dcx.TenDC" class="img-responsive img-rounded imgbook " width="300" height="200">
+                    </div>
+                    <div class="caption bg-danger">
+                        <h5> @dcx.TenDC</h5>
+                        <font color="red">Giá công bố : @dcx.GiaDC.Value.ToString("#,##")</font>
+                        <p><a href="@Url.Action("ChiTietPhuKienXe","Home", new { id = dcx.MaDC})" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Xem Chi Tiết</a></p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="MenuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("DoChoiTheoLoai", new { MaLoaiCD = ViewBag.MaLoaiCD, page = page }))
+    </div>
+    <style>
+        .MenuTrang {
+            display: inline;
+            text-align: center;
+        }
+    </style>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

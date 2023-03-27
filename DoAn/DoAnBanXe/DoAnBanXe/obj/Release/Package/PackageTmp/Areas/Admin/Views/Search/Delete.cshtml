@@ -1,0 +1,92 @@
+﻿@model DoAnBanXe.Models.Xe
+
+@{
+    ViewBag.Title = "Xóa";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    h3, h4 {
+        color: red;
+        font-weight: bold;
+    }
+
+    button, input, select, textarea {
+        border-radius: 60px;
+        outline: 0 !important;
+        font-size: 30px;
+        background-color: #3399FF;
+    }
+
+        input[type="submit"]:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        input[type="submit"]:active {
+            background-color: /*rgb(91 89 89 / 0.51)*/ #ffffff82;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+    .tieude {
+        text-align: center;
+    }
+
+    .duoitrang {
+        text-align: center
+    }
+
+        .duoitrang hr {
+            border: 0px;
+        }
+</style>
+<div class="tieude">
+    <h2>XÁC NHẬN THÔNG TIN CẦN XÓA</h2>
+    <h3>Bạn quyết định xóa quyển sách này?</h3>
+    <h4>@Html.Raw(ViewBag.ThongBao)</h4>
+</div>
+
+<hr />
+<dl class="dl-horizontal">
+
+    <dt>Loại Xe:</dt>
+    <dd>@Html.DisplayFor(model => model.Class.TenClass)</dd>
+    <hr />
+    <dt>Tên Xe:</dt>
+    <dd>@Html.DisplayFor(model => model.TenXe) </dd>
+    <hr />
+    <dt> Ảnh bìa: </dt>
+    <dd> <img src="~/image/@Model.AnhBia" alt=" @Model.TenXe"> </dd>
+    <hr />
+    <dt> Ngày cập nhật:</dt>
+    <dd> @Html.FormatValue(@Model.NgayCapNhat, "{0:dd/MM/yyyy}") </dd>
+    <hr />
+    <dt>Giá bán: </dt>
+    <dd> @Html.FormatValue(@Model.GiaXe, "{0:#,##0}") VNĐ</dd>
+    <hr />
+    <dt> Mô tả: </dt>
+    <dd>
+        @Html.Raw(@Model.MoTa.ToString().Replace("\n", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+    </dd>
+    <hr />
+
+
+</dl>
+<div class="duoitrang">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="" />
+        </div>
+        <hr />
+        @Html.ActionLink("VỀ TRANG QUẢN LÝ SÁCH", "Index", "Xe")
+        <hr />
+    }
+</div>
+

@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FFEDA30D-7444-4158-B9D3-A40B958550BA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoAnBanXe</RootNamespace>
+    <AssemblyName>DoAnBanXe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44392</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BasesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SearchController.cs" />
+    <Compile Include="Areas\Admin\Controllers\XeController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UseController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserKhachHangController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbXeMer.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbXeMer.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GioHang.cs" />
+    <Compile Include="Models\LaiThu1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Script\JavaScriptThongBao.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Messenger.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\phone.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\structure.css" />
+    <Content Include="Content\zalo.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="image\2 xe mec.png" />
+    <Content Include="image\arrow.png" />
+    <Content Include="image\backround.png" />
+    <Content Include="image\back_to_top.png" />
+    <Content Include="image\banner admin 6.png" />
+    <Content Include="image\banner Phu Kien 001 .png" />
+    <Content Include="image\banner-4569.png" />
+    <Content Include="image\banner-mercedes-benz.png" />
+    <Content Include="image\banner-phukienoto.png" />
+    <Content Include="image\banner1.png" />
+    <Content Include="image\banner2.png" />
+    <Content Include="image\banner3.png" />
+    <Content Include="image\banner4.png" />
+    <Content Include="image\bannerTinTucKhuyenMai1.jpg" />
+    <Content Include="image\baoduong.png" />
+    <Content Include="image\baoduong1,2.png" />
+    <Content Include="image\baoduong2,1.png" />
+    <Content Include="image\baoduong2.bng.jpg" />
+    <Content Include="image\Bơm lốp ô tô, xe hơi mini Steelmate P05 tự ngắt.jpg" />
+    <Content Include="image\Bơm mini cầm tay đa năng chính hãng Xiaomi MJCQB01QJ.jpg" />
+    <Content Include="image\Bạt che, chắn nắng kính lái Ô tô, Xe hơi – Phủ bên ngoài.jpg" />
+    <Content Include="image\Bảng số điện thoại dùng trên xe hơi chính hãng Baseus Dual Number vỏ nhôm.jpg" />
+    <Content Include="image\Bọc vô lăng D Cut logo cờ Pháp vân Carbon cao cấp.jpg" />
+    <Content Include="image\Bọc vô lăng Sparco chính hãng SPC1109AZ.jpg" />
+    <Content Include="image\Bọc vô lăng Sparco chính hãng SPC1109GR.jpg" />
+    <Content Include="image\Bọc vô lăng Sparco chính hãng SPC1111GR.jpg" />
+    <Content Include="image\Bọc vô lăng Sparco chính hãng SPC1111RS.jpg" />
+    <Content Include="image\Bọc vô lăng Sparco chính hãng SPS100RD, SPS100BK.jpg" />
+    <Content Include="image\Bọc vô lăng Sparco chính hãng SPS1102BL.jpg" />
+    <Content Include="image\Bộ 2 mang cá giả hốc gió trang trí sườn xe Ô tô, xe hơi.jpg" />
+    <Content Include="image\Bộ 4 rèm vải che nắng cửa kính Xe hơi, Ô tô.jpg" />
+    <Content Include="image\Bộ Logo 3D trang trí hông xe Mercedes biểu tượng bông lúa.jpg" />
+    <Content Include="image\Bộ Logo 3D trang trí hông xe VIP biểu tượng bông lúa.jpg" />
+    <Content Include="image\Bộ lót cốp và lưng ghế xe Mercedes C180, C200, C250, C300 thương hiệu Eudora CloudFoam.jpg" />
+    <Content Include="image\Bộ lót ghế, tựa lưng Massage hạt gỗ cho Ô tô, Xe hơi.jpg" />
+    <Content Include="image\Bộ tinh dầu khử mùi trên ô tô, xe hơi chính hãng Baseus.jpg" />
+    <Content Include="image\Bộ Ốp bậc cửa, Nẹp bước chân INOX Mercedes C180, C200, C250, C300 – Bên Trong.jpg" />
+    <Content Include="image\Bộ Ốp bậc cửa, Nẹp bước chân Titan Mercedes C180, C200, C250, C300 – Bên Trong.jpg" />
+    <Content Include="image\Bộ ốp bọc chân ga, chân phanh AMG cho xe Mercedes-Benz.jpg" />
+    <Content Include="image\Bộ ốp gương chiếu hậu Mercedes C Class C180, C200, C250, C300 đen bóng.jpg" />
+    <Content Include="image\Bộ ốp hõm cửa xe Mercedes GLC200, GLC250, GLC300 mạ Crom.jpg" />
+    <Content Include="image\Camera Hành Trình VAVA Dual Dash Cam VD002 – 2 mắt trước sau %28Tặng kèm thẻ nhớ 16Gb%29.jpg" />
+    <Content Include="image\Camera hành trình Vietmap C61 – Ghi hình 4K %28Tặng kèm thẻ nhớ 32G%29.png" />
+    <Content Include="image\Camera hành trình Vietmap iDVR P2 – Thiết kế gương tràn viền, định vị xe trực tuyến.jpg" />
+    <Content Include="image\Camera hành trình Xiaomi 70mai A500s Dash Cam 2K7 – 2 mắt trước sau.png" />
+    <Content Include="image\Camera hành trình Xiaomi 70mai A800 Dash Cam 4K – 2 mắt trước sau.png" />
+    <Content Include="image\Camera hành trình Xiaomi 70mai A800S Dash Cam 4K – 2 mắt trước sau.png" />
+    <Content Include="image\Chữ Sport kim loại 3D nổi dán trang trí Ô tô, Xe hơi.jpg" />
+    <Content Include="image\Cảm biến áp suất lốp Fobo Tire – Van Ngoài.png" />
+    <Content Include="image\Cảm biến áp suất lốp Steelmate E3 van trong.jpg" />
+    <Content Include="image\Cảm biến áp suất lốp TPMS Steelmate E3W van ngoài.jpg" />
+    <Content Include="image\Cảm biến áp suất lốp TPMS Steelmate TP-MT11 van trong.jpg" />
+    <Content Include="image\Cảm biến áp suất lốp TPMS Steelmate TP-MT30 van trong tích hợp USB hiển thị trên màn hình Android.jpg" />
+    <Content Include="image\Cảm biến áp suất lốp Xiaomi 70mai MiDrive T02 – Van ngoài.jpg" />
+    <Content Include="image\dauAMG.mp4" />
+    <Content Include="image\daudongcochinhhang.mp4" />
+    <Content Include="image\denphadenhau.mp4" />
+    <Content Include="image\dầu-nhớt-động-cơ-banner.jpg" />
+    <Content Include="image\GioHang1.png" />
+    <Content Include="image\honda.png" />
+    <Content Include="image\icon.ico" />
+    <Content Include="image\iemDangKyDichVu.png" />
+    <Content Include="image\image.MQ6.12.20210505045852.jpeg" />
+    <Content Include="image\itemCamKet.png" />
+    <Content Include="image\itemCheDoBaoHanh.png" />
+    <Content Include="image\Khay để đồ khe ghế Ô tô, xe hơi bọc da cao cấp.jpg" />
+    <Content Include="image\LocDau2.mp4" />
+    <Content Include="image\LocGio2.mp4" />
+    <Content Include="image\Logo chữ DISCOVERY 3D nổi dán nắp Capo Ô tô, Xe hơi.jpg" />
+    <Content Include="image\Logo chữ TITANIUM 3D nổi dán trang trí Ô tô, Xe hơi.jpg" />
+    <Content Include="image\Logo chữ TRD 3D nổi dán trang trí Ô tô, Xe hơi.jpg" />
+    <Content Include="image\Logo chữ TRD-Sport 3D nổi dán trang trí Ô tô, Xe hơi.jpg" />
+    <Content Include="image\Logo chữ VVT-i 3D nổi dán trang trí Ô tô, Xe hơi.jpg" />
+    <Content Include="image\logo login.png" />
+    <Content Include="image\logo.png" />
+    <Content Include="image\logom.png" />
+    <Content Include="image\lái thử Mercedes-benz 2020.png" />
+    <Content Include="image\Lót cốp da 6D Mercedes GLC %28GLC200, GLC250, GLC300%29 full thành.jpg" />
+    <Content Include="image\Lót cốp Mercedes C180, C200, C250, C300 2015-2019 chất liệu TPO cao cấp.jpg" />
+    <Content Include="image\mercedes congty .png" />
+    <Content Include="image\MERCEDES-AMG CLA 45 4MATIC.png" />
+    <Content Include="image\mercedes-banner-1.jpg" />
+    <Content Include="image\mercedes-banner-2.png" />
+    <Content Include="image\mercedes-banner-3.png" />
+    <Content Include="image\mercedes-banner-4.png" />
+    <Content Include="image\mercedes-banner-5.png" />
+    <Content Include="image\MERCEDES-BENZ C180 AMG.png" />
+    <Content Include="image\MERCEDES-BENZ C200 EXCLUSIVE.png" />
+    <Content Include="image\MERCEDES-BENZ C300 AMG.png" />
+    <Content Include="image\MERCEDES-BENZ CLA 200.png" />
+    <Content Include="image\MERCEDES-BENZ CLA 250 4MATIC.png" />
+    <Content Include="image\MERCEDES-BENZ CLA 250.png" />
+    <Content Include="image\MERCEDES-BENZ E 200 SPORT.png" />
+    <Content Include="image\MERCEDES-BENZ E 200.png" />
+    <Content Include="image\Mercedes-benz E0 Exulusive.png" />
+    <Content Include="image\MERCEDES-BENZ GLA 200.png" />
+    <Content Include="image\MERCEDES-BENZ GLA 250 4MATIC.png" />
+    <Content Include="image\Mercedes-benz GLB.png" />
+    <Content Include="image\Mercedes-Benz GLC 200 4MATIC.png" />
+    <Content Include="image\MERCEDES-BENZ GLC 200 FL 2021.png" />
+    <Content Include="image\Mercedes-Benz GLC 300 4MATIC.png" />
+    <Content Include="image\Mercedes-Benz GLS 2020.png" />
+    <Content Include="image\Mercedes-Benz GLS 450 4Matic.png" />
+    <Content Include="image\Mercedes-Benz S 450 L Luxury.png" />
+    <Content Include="image\Mercedes-Benz S 450 L.png" />
+    <Content Include="image\Mercedes-benz vn C 180 AMG mới.png" />
+    <Content Include="image\Mercedes-Benz vn E-class mới .png" />
+    <Content Include="image\mercedes-gle-2019-ra-mat-2-1760.png" />
+    <Content Include="image\Mercedes-Maybach GLS 600 4matic.png" />
+    <Content Include="image\MERCEDESS-BENZ CLA 250 4MATIC.png" />
+    <Content Include="image\messenger.svg" />
+    <Content Include="image\Màn hinh HUD Vietmap – H1x hiển thị thông tin OBD-II.jpg" />
+    <Content Include="image\Màn hình HUD Vietmap H1AS dẫn đường, kết nối cảm biến Áp suất lốp TPMS van ngoài, hiển thị thông tin OBD-II.jpg" />
+    <Content Include="image\Máy bơm lốp Xe hơi – Ô tô Chính hãng Xiaomi 70MAI Midrive TP01.jpg" />
+    <Content Include="image\Máy bơm lốp Ô Tô, Xe hơi Xiaomi 70mai Midrive TP03.jpg" />
+    <Content Include="image\Máy hút bụi Baseus Shark One H-505 Car Vacuum Cleaner không dây.jpg" />
+    <Content Include="image\Máy khử mùi, lọc không khí trong Ô tô, Xe hơi Hyundai HY-12.jpg" />
+    <Content Include="image\Máy lọc không khí, khử mùi xe hơi, ô tô Sharp IG-KC15.jpg" />
+    <Content Include="image\Nước hoa cho Xe hơi, Ô tô cao cấp chính hãng Bugale Zero Gold.jpg" />
+    <Content Include="image\Nước hoa cho Xe hơi, Ô tô cao cấp chính hãng Fresh Bottle Amber.jpg" />
+    <Content Include="image\Nước hoa cho Xe hơi, Ô tô chính hãng Scentech Buckingham Plus hương Cà phê.jpg" />
+    <Content Include="image\Nước hoa đồng hồ pha lê trang trí Taplo Ô tô, Xe hơi.jpg" />
+    <Content Include="image\phone.svg" />
+    <Content Include="image\phutungvideoPhanh1.mp4" />
+    <Content Include="image\phutungvideoPhanh2.mp4" />
+    <Content Include="image\profile_user.png" />
+    <Content Include="image\Tem chữ 4WD Fulltime 3D nổi dán trang trí Ô tô, Xe hơi.jpg" />
+    <Content Include="image\thanhgatnuoc.mp4" />
+    <Content Include="image\Thùng, hộp đựng đồ co giãn trên Ô tô, Xe hơi – thể tích 40L.jpg" />
+    <Content Include="image\Thảm da Taplo Mercedes C180, C200, C250, C300 vân Carbon cao cấp.jpg" />
+    <Content Include="image\Thảm sàn, lót sàn Da 6D cao cấp cho Mercedes GLC %28200, 250, 300%29.jpg" />
+    <Content Include="image\Thảm sàn, lót sàn Mercedes GLC 200, GLC 250, GLC 300 thương hiệu Kata.jpg" />
+    <Content Include="image\tiemDichVuSuaChua.png" />
+    <Content Include="image\Tượng Hổ vằn đính đá phong thủy trang trí Taplo Xe hơi, Ô tô.jpg" />
+    <Content Include="image\Tượng Phật 3 mặt cầu tài, cầu bình an đặt Taplo Xe hơi, Ô tô.jpg" />
+    <Content Include="image\Tượng Phật Di Lặc cầu tài, cầu bình an đặt Taplo Xe hơi, Ô tô.jpg" />
+    <Content Include="image\Tấm dán chống bám nước, đọng nước gương chiếu hậu xe hơi.jpg" />
+    <Content Include="image\Tẩu sạc ô tô Baseus 2 cổng sạc Type-C, USB 45W PPS Quick Changer.jpg" />
+    <Content Include="image\videoLocGio1.mp4" />
+    <Content Include="image\We test for your safety MercedesBenz GenuineParts  MercedesBenz original_1080p.mp4" />
+    <Content Include="image\xe-Mercedes-E300-AMG.png" />
+    <Content Include="image\zalo.svg" />
+    <Content Include="image\Ốp chống trầy cốp INOX Mercedes C180, C200, C250, C300 – Bên trong.jpg" />
+    <Content Include="image\Ốp chống trầy cốp Titan Mercedes C180, C200, C250, C300 2016-2020 – Bên trong.jpg" />
+    <Content Include="image\Ốp hõm cửa xe Mercedes GLC-Class %28GLC200, GLC250, GLC300%29 2016-2020 nhựa ABS vân Carbon cao cấp.jpg" />
+    <Content Include="image\Ốp nội thất Mercedes C-Class C180, C200, C250, C300 vân Carbon cao cấp.jpg" />
+    <Content Include="image\Ốp tay nắm cửa xe Mercedes C-Class %28C180, C200, C250, C300%29 2016-2020 nhựa ABS vân Carbon cao cấp.jpg" />
+    <Content Include="image\Ốp tay nắm cửa xe Mercedes C180, C200, C250, C300 mạ Crom.jpg" />
+    <Content Include="image\Ốp tay nắm cửa xe Mercedes-Benz C-Class, GLC-Class 2016-2020 nhựa ABS vân Carbon cao cấp.jpg" />
+    <Content Include="Models\dbXeMer.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbXeMer.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\Login1.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\KhachHang.cshtml" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\LoginLogoutPartial.cshtml" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\DonDatHang.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\Search.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\GroupClass.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\GroupPhuKien.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\Detail.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\CreateClass.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\DeleteClass.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\CreatePK.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\DetailsPK.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\DeletePK.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\EditPK.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\CreateDH.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\DeleteDH.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\EditDH.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\CreateDC.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\DetailDC.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\DeleteDC.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\EditDC.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\DeleteDHDC.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\EditDHDC.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\CreateDHDC.cshtml" />
+    <Content Include="Areas\Admin\Views\Xe\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Xe\QLCLass.cshtml" />
+    <Content Include="Areas\Admin\Views\Xe\QLPK.cshtml" />
+    <Content Include="Areas\Admin\Views\Xe\QLDH.cshtml" />
+    <Content Include="Areas\Admin\Views\Xe\QLDCX.cshtml" />
+    <Content Include="Areas\Admin\Views\Xe\QLDHDCX.cshtml" />
+    <None Include="Models\dbXeMer.dbml.layout">
+      <DependentUpon>dbXeMer.dbml</DependentUpon>
+    </None>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\JavaScriptThongBao.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\ThongBao.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Views\Shared\_LayoutUser.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\GioiThieu.cshtml" />
+    <Content Include="Views\Home\TinTucKhuyenMai.cshtml" />
+    <Content Include="Views\Home\BaoDuongXechuyenNghiep.cshtml" />
+    <Content Include="Views\Home\Dau.cshtml" />
+    <Content Include="Views\Home\PhuTung.cshtml" />
+    <Content Include="Views\Home\ChiTietXe.cshtml" />
+    <Content Include="Views\Home\NavbarPartial.cshtml" />
+    <Content Include="Views\Home\XeTheoClass.cshtml" />
+    <Content Include="Views\Home\PhuKienPartial.cshtml" />
+    <Content Include="Views\Home\ChiTietPhuKien.cshtml" />
+    <Content Include="Views\Home\SanPham.cshtml" />
+    <Content Include="Views\Home\LoginLogoutPartial.cshtml" />
+    <Content Include="Views\Home\DoChoiXe.cshtml" />
+    <Content Include="Views\Home\LoaiDoChoiPartial.cshtml" />
+    <Content Include="Views\Home\DoChoiTheoLoai.cshtml" />
+    <Content Include="Views\Home\ChiTietPhuKienXe.cshtml" />
+    <Content Include="Views\Use\PhanLoaiXePartial.cshtml" />
+    <Content Include="Views\Use\LaiThu.cshtml" />
+    <Content Include="Views\User\DangNhap.cshtml" />
+    <Content Include="Views\User\DangKy.cshtml" />
+    <Content Include="Views\UserKhachHang\Index.cshtml" />
+    <Content Include="Views\UserKhachHang\Index1.cshtml" />
+    <Content Include="Views\UserKhachHang\CapNhatThongTin.cshtml" />
+    <Content Include="Views\UserKhachHang\CapNhatDonHang.cshtml" />
+    <Content Include="Views\GioHang\GioHang.cshtml" />
+    <Content Include="Views\GioHang\GioHangPartial.cshtml" />
+    <Content Include="Views\GioHang\DatHang.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Bases\" />
+    <Folder Include="UploadFile\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53629</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44392/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

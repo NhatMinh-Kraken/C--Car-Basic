@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Quản Lý Khách Hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    .table-bordered {
+        padding-bottom: 0px;
+    }
+
+    .table {
+        margin-bottom: 32%;
+    }
+</style>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Mã Khách Hàng</th>
+            <th>Tên Khách Hàng</th>
+            <th>Tài Khoản</th>
+            <th>Mật Khẩu</th>
+            <th>Email</th>
+            <th>Điện Thoại</th>
+            <th>Địa Chỉ</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.KhachHangs)
+        {
+            <tr>
+                <td>@item.MaKH</td>
+                <td>@item.HoTen</td>
+                <td>@item.TaiKhoan</td>
+                <td>@item.MatKhau</td>
+                <td>@item.email</td>
+                <td>@item.DienThoai</td>
+                <td>@item.DiaChi</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

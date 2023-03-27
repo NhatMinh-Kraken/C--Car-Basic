@@ -1,0 +1,87 @@
+﻿@model DoAnBanXe.Models.ChiTietDonDatHangDC
+
+@{
+    ViewBag.Title = "Xóa Đơn Hàng Đồ Chơi";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    h2 {
+        text-align: center;
+        color: red;
+    }
+
+    h3 {
+        text-align: center;
+        color: red;
+    }
+
+    .form-actions {
+        text-align: center;
+    }
+
+    .dl-horizontal {
+        margin-left: 37%;
+    }
+</style>
+
+
+<h2>Xóa Đơn Hàng Đồ Chơi</h2>
+
+<h3>Bạn Có Chắc Chắn Xóa Đơn Hàng Này Không ?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Khách Hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKH)
+        </dd>
+
+        <dt>
+            Tên Phụ Kiện
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDC)
+        </dd>
+
+        <dt>
+            Giá Phụ Kiện
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaDC)
+        </dd>
+
+        <dt>
+            Ngày Đặt
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDat)
+        </dd>
+
+        <dt>
+            Số Lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại Trang Quản Lý Đơn Hàng", "QLDHDCX", "Xe")
+        </div>
+    }
+</div>

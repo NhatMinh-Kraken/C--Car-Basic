@@ -1,0 +1,12 @@
+﻿@using DoAnBanXe.Models
+@{
+    ADMIN add = (ADMIN)Session["TenDN"];
+}
+
+@if (Session["TenDN"] == null)
+{
+    <li><a href="@Url.Action("Logout","HomeAdmin")"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a></li>
+}
+
+
+

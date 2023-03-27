@@ -1,0 +1,100 @@
+﻿@model DoAnBanXe.Models.DonDatHang
+
+@{
+    ViewBag.Title = "Sửa Đơn Hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    h2 {
+        text-align: center;
+        color: red;
+    }
+
+    hr {
+        border: 0px;
+    }
+
+    .duoi {
+        text-align: center;
+    }
+
+    .form-horizontal .form-group {
+        margin-right: 10px;
+        margin-left: 30%;
+    }
+</style>
+
+<h2>Sửa Đơn Hàng</h2>
+
+@using (Html.BeginForm("EditDH", "Search", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.MaDonHang)
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Mã:</label>
+            <div class="col-md-10">
+                @*Chỉ hiển thị mã sách không cho sửa*@
+                <input type="text" size="70" name="iMa" value="@Model.MaDonHang" readonly />
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Họ và Tên:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sHoTen" value="@Model.HoTen" required />
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Số Điện Thoại:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sDienThoai" value="@Model.DienThoai" required />
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Địa Chỉ:</label>
+            <div class="col-md-10">
+                <textarea name="sDiaChi"><p>@Model.DiaChi.Replace("\n","</p><p>")</p></textarea>
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Email:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sEmail" value="@Model.email" required />
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Loại Xe:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sLoaiXe" value="@Model.LoaiXe" required />
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên Xe:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sTenXe" value="@Model.TenXe" required />
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="LƯU THÔNG TIN" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="duoi">
+    @Html.ActionLink("Quay Lại Trang Quản Lý Đơn Hàng", "QLDH", "Xe")
+</div>

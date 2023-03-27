@@ -1,0 +1,173 @@
+﻿@using DoAnBanXe.Models
+@model DoAnBanXe.Models.KhachHang
+
+
+@{
+    ViewBag.Title = "Đăng Ký";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+<style type="text/css">
+    div#wapper {
+        background: radial-gradient(#030872, #027cad, #87faf7);
+    }
+
+    tr {
+        height: 40px;
+    }
+
+    td {
+        height: 40px;
+    }
+
+    .dn {
+        height: 500px;
+        padding-top: 90px;
+    }
+
+    .khung {
+        top: 3px;
+        right: -30%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    button, input, select, textarea {
+        border-radius: 20px;
+        outline: 0 !important;
+    }
+
+    .nut {
+        text-align: left;
+    }
+
+    input[type="submit"]:active {
+        background-color: #51A9FF;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+    input[type="reset"]:active {
+        background-color: #51A9FF;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+    input[type="reset"] {
+        background: #000;
+        color: aliceblue;
+    }
+
+        input[type="reset"]:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            color: red;
+            border: red;
+        }
+
+    input[type="submit"] {
+        background: #000;
+        color: aliceblue;
+    }
+
+        input[type="submit"]:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            color: red;
+            border: red;
+        }
+
+    /*input[type="submit"]:active {
+            background-color:*/ /*rgb(91 89 89 / 0.51)*/ /*#51A9FF;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }*/
+
+    .validation-summary-errors {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .trai ul {
+        width: 65%;
+        color: red;
+        margin-left: 170px;
+    }
+
+    table {
+        margin-left: 38%;
+    }
+
+    td, th {
+        padding: 5px;
+    }
+
+    td {
+        color: #ff6a00;
+        text-align: unset;
+    }
+
+    .trai {
+        width: 30%;
+        float: left;
+        position: relative;
+    }
+
+    h2 {
+        color: red;
+    }
+</style>
+
+<div class="Anh text-center">
+    <img src="~/image/logo.png" />
+</div>
+<h4 style="color:red; text-align:center;">@ViewBag.ThongBao</h4>
+<table @*align="center"*@>
+    <h2 style="text-align:center">ĐĂNG KÝ THÀNH VIÊN<span class="glyphicon glyphicon-user"></span></h2>
+    @using (Html.BeginForm("DangKy", "User"))
+    {
+        <div class="trai">
+            @Html.ValidationSummary(false)
+        </div>
+        <tr>
+            <td>Họ tên:</td>
+            <td>@Html.TextBox("HoTen") @Html.ValidationMessageFor(model => model.HoTen, "(*)", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Tên đăng nhập:</td>
+            <td>@Html.TextBox("TaiKhoan") @Html.ValidationMessageFor(model => model.TaiKhoan, "(*)", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Mật khẩu:</td>
+            <td>@Html.Password("MatKhau") @Html.ValidationMessageFor(model => model.MatKhau, "(*)", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Mật khẩu nhập lại:</td>
+            <td>@Html.Password("MatKhauNL") @ViewData["err4"]</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>@Html.TextBox("Email") @Html.ValidationMessageFor(model => model.email, "(*)", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Điện thoại:</td>
+            <td>@Html.TextBox("DienThoai") @Html.ValidationMessageFor(model => model.DiaChi, "(*)", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Địa chỉ:</td>
+            <td><input type="text" name="DiaChi" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Đăng ký" /> <input type="reset" value="Xóa Thông Tin" />
+            </td>
+        </tr>
+    }
+</table>
+
+

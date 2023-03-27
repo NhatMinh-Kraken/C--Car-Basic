@@ -1,0 +1,111 @@
+﻿@model DoAnBanXe.Models.DonDatHang
+
+@{
+    ViewBag.Title = "Xóa Đơn Hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    h2 {
+        text-align: center;
+        color: red;
+    }
+
+    h3 {
+        text-align: center;
+        color: red;
+    }
+
+    .form-actions {
+        text-align: center;
+    }
+
+    .dl-horizontal {
+        margin-left: 37%;
+    }
+</style>
+
+<h2>Xóa Đơn Hàng</h2>
+
+<h3>Bạn Có Chắc Chắn Xóa Đơn Hàng Này Không ?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Đơn Hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDonHang)
+        </dd>
+
+        <dt>
+            Tên Tài Khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTK)
+        </dd>
+
+        <dt>
+            Họ và Tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Điện Thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienThoai)
+        </dd>
+
+        <dt>
+            Địa Chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            Loại Xe
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiXe)
+        </dd>
+
+        <dt>
+            Tên Xe
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenXe)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" />
+            <hr />
+            @Html.ActionLink("Quay Lại Trang Quản Lý Đơn Hàng", "QLDH", "Xe")
+        </div>
+    }
+</div>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DoAnBanXe.Models.LoaiDoChoiXe>
+
+<style type="text/css">
+    .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+        z-index: 2;
+        color: #fff;
+        background-color: #ff6a00;
+        border-color: #ffd800;
+    }
+
+    .list-group:hover .dropdown-menu {
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #808080;
+    }
+</style>
+
+<ul class="list-group">
+    <li class="dropdown list-group-item active" style="font-weight:bold; text-align:center">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" @*aria-expanded="false" aria-haspopup="true"*@>Loại Phụ Kiện</a>
+        <ul class="menu dropdown-menu">
+            @foreach (var MaLoaiDC in Model)
+            {
+                <li><a href="@Url.Action( "DoChoiTheoLoai", "Home", new { id = MaLoaiDC.MaLoaiDC})">@MaLoaiDC.TenLoaiDC</a></li>
+                <li role="separator" class="divider"></li>
+            }
+        </ul>
+    </li>
+</ul>

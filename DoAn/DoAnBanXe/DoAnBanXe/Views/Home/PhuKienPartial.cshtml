@@ -1,0 +1,13 @@
+﻿@model IEnumerable<DoAnBanXe.Models.PhuKien>
+@using DoAnBanXe.Models;
+
+<div class="container text-center">
+    <div class="btn-group">
+
+        @foreach (var phukien in Model)
+        {
+            <button type="button" class="btn btn-primary"><a href="@Url.Action("ChiTietPhuKien","Home", new { id = phukien.MaPhuKien} )">@phukien.Phukien1</a></button>
+        }
+    </div>
+</div>
+

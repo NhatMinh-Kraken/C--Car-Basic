@@ -1,0 +1,341 @@
+﻿@{
+    ViewBag.Title = "Tin Tức Khuyến Mãi";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style type="text/css">
+
+
+
+    .aem-grid-stage {
+        height: 100%;
+        position: absolute;
+        color: rgb(255 106 0);
+        letter-spacing: .05em;
+        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+        top: 3%;
+    }
+
+    p {
+        margin: 0 175px 0px;
+    }
+
+    .aem-grid-content {
+        padding: 0 44px;
+    }
+
+    .productpageheadline {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -14px;
+        margin-left: -14px;
+    }
+
+    .productpageheadline_inner {
+        padding-right: 14px;
+        padding-left: 14px;
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+
+    .productpageheadline_topic {
+        font-size: 1.125rem;
+        font-family: "MBCorpoSTitle-Regular-Web", "DaimlerCS-Regular", Helvetica, Arial, sans-serif;
+        line-height: 1.22222;
+        padding-top: 0;
+        padding-bottom: .12844em;
+        margin-top: -.017em;
+        margin-bottom: .5em;
+    }
+
+    .productpageheadline__headline {
+        font-size: 2.25rem;
+        font-family: "MBCorpoATitleCond-Regular-Web", "DaimlerCAC-Regular", Helvetica, Arial, sans-serif;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        padding-top: 0;
+        padding-bottom: .05167em;
+        margin-top: .50444em
+    }
+
+    .productpageheadline__subheadline {
+        font-size: 1.125rem;
+        font-family: "MBCorpoSTitle-Regular-Web", "DaimlerCS-Regular", Helvetica, Arial, sans-serif;
+        line-height: 1.22222;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        padding-top: 0;
+        padding-bottom: .12844em;
+        margin-top: .42744em;
+        text-align: left;
+    }
+
+    .p {
+        margin: 0 0 10px
+    }
+
+    hr {
+        border-top: 0px;
+    }
+    /*zoom ảnh */
+
+    .thumbnail {
+        background: #CCCCCC;
+        border: 1px solid #CCCCCC;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .TinTuc1 {
+        position: relative;
+        overflow: hidden;
+        padding: 10px 10px 0;
+    }
+
+        .TinTuc1 h5 {
+            font-style: italic;
+            text-align: left;
+        }
+
+        .TinTuc1 img {
+            transition: all 0.5s;
+            position: relative;
+        }
+
+        .TinTuc1 :hover img {
+            -webkit-transform: scale(1.2, 1.2);
+            -moz-transform: scale(1.2, 1.2);
+            -o-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+            transition: all 0.5s;
+        }
+
+        .TinTuc1 ul li {
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+    .img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .TinTuc1 h4 {
+        text-align: left;
+    }
+</style>
+
+<div class="">
+    <div class="aem-grid-stage text-center">
+        <h3 class="stage_headline">
+            <div class="stage_hl rte_base">
+                <p>TIN TỨC & SỰ KIỆN</p>
+                <p>Thông tin cập nhật về Mercedes-Benz.</p>
+            </div>
+        </h3>
+    </div>
+    <div class="">
+        <img src="~/image/bannerTinTucKhuyenMai1.jpg" width="100%" height="auto">
+    </div>
+    <hr>
+
+    <div class="contentpager container">
+        <div class="aem-grid-content">
+            <div class="productpageheadline">
+                <div class="productpageheadline_inner">
+                    <h2 class="productpageheadline_topic text-left"><u>5/5/2021</u></h2>
+                    <div class="productpageheadline__headline text-left">Giới Thiệu Mercedes-Maybach GLS 600 4MATIC mới.</div>
+                    <h3 class="productpageheadline__subheadline">
+                        <p class="p">Tinh hoa siêu sang của thới giới SUV</p>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="TinTuc1">
+
+            <div class="thumbnail">
+                <img src="~/image/Mercedes-Maybach GLS 600 4matic.png" width="1000px">
+            </div>
+            <i>
+                Mẫu xe Mercedes-Maybach GLS 600 4MACTIC là sự kết hợp hoàn hảo giữa sức mạnh, sự đa dụng của mẫu xe GLS với sự sang trọng cùng tiện nghi thương gia hàng đầu của thương hiệu Maybach.
+            </i>
+            <hr>
+            <ul>
+                <li>
+                    Mẫu xe SUV siêu sang này sử dụng động cơ V8 4.0L tăng áp kép, có thể sản sinh đạt công suất cực đại 558 mã lực. Sức kéo lên đến 730Nm trong dải vòng tua 2.500 - 5.000 vòng/phút.
+                </li>
+                <li>
+                    Mercedes-Maybach GLS 600 4MATIC dự kiến sẽ có mặt tại các đại lý của MBV trong quý III/2021 với mức giá dự kiến 12,5 – 14,5 tỷ đồng (đã bao gồm thuế GTGT).
+                </li>
+            </ul>
+            <hr>
+
+        </div>
+    </div>
+    <div class="contentpager container">
+        <div class="aem-grid-content">
+            <div class="productpageheadline">
+                <div class="productpageheadline_inner">
+                    <h2 class="productpageheadline_topic text-left"><u>23/4/2021</u></h2>
+                    <div class="productpageheadline__headline text-left">Giới Thiệu Mercedes-AMG GLE 53 4MACTIC + COUPLE mới.</div>
+                    <h3 class="productpageheadline__subheadline">
+                        <p class="p">Nhanh hơn & gợi cảm hơn</p>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="TinTuc1">
+
+            <div class="thumbnail">
+                <img src="~/image/image.MQ6.12.20210505045852.jpeg" width="1000px">
+            </div>
+            <i>
+                Mercedes-Benz đã chính thức ra mắt Mercedes-AMG GLE 53 4MATIC+ Coupé, chiếc SUV hiệu năng cao thực sự đột phá về mặt thiết kế lẫn hiệu năng vận hành.
+            </i>
+            <hr>
+            <ul>
+                <li>
+                    435 mã lực, tăng tốc 0 – 100 km/h trong vòng 5,3 giây, sức kéo lên đến 520 Nm. Đây chính là hiệu năng của một xe thể thao thực thụ, nhưng đó không phải là sedan, coupé hay GT, mà là Mercedes-AMG GLE 53 4MATIC+ Coupé.
+                </li>
+                <li>
+                    Mercedes-AMG GLE 53 4MATIC+ Coupé có mặt tại các đại lý của Mercedes-Benz ngay trong tháng 5/2021 với giá bán 5,349 tỷ đồng (đã bao gồm thuế GTGT).
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <div class="contentpager container">
+        <div class="aem-grid-content">
+            <div class="productpageheadline">
+                <div class="productpageheadline_inner">
+                    <h2 class="productpageheadline_topic text-left"><u>24/3/2021</u></h2>
+                    <div class="productpageheadline__headline text-left">Mercedes-Benz Việt Nam giới thiệu hai phiên bản E-Class mới</div>
+                    <h3 class="productpageheadline__subheadline">
+                        <p class="p">Cấp tiến để dẫn đầu</p>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="TinTuc1">
+
+            <div class="thumbnail">
+                <img src="~/image/Mercedes-Benz vn E-class mới .png" width="1000px">
+            </div>
+            <i>
+                E-Class phiên bản nâng cấp được Mercedes-Benz Việt Nam ra mắt ngày 24/3/2021
+            </i>>
+            <hr>
+            <ul>
+                <li>
+                    E-Class mới vượt xa chuẩn mực của một bản facelift và là chiếc xe tiên phong của về thiết kế đột phá và công nghệ an toàn trong kỷ nguyên số hóa của ngành công nghiệp ôtô.
+                </li>
+                <li>
+                    E-Class mới có mặt tại hệ thống đại lý ủy quyền chính hãng của MBV từ ngày 24/03/2021 với giá bán lần lượt là 2,31 tỷ đồng (E 200 Exclusive) và 2,95 tỷ đồng (E 300 AMG), đã bao gồm thuế GTGT.
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <div class="contentpager container">
+        <div class="aem-grid-content">
+            <div class="productpageheadline">
+                <div class="productpageheadline_inner">
+                    <h2 class="productpageheadline_topic text-left"><u>8/3/2021</u></h2>
+                    <div class="productpageheadline__headline text-left">Mercedes-Benz Việt Nam giới thiệu phiên bản C 180 AMG mới</div>
+                    <h3 class="productpageheadline__subheadline">
+                        <p class="p">Cơn sốt đô thị.</p>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="TinTuc1">
+
+            <div class="thumbnail">
+                <img src="~/image/Mercedes-benz vn C 180 AMG mới.png" width="1000px">
+            </div>
+            <i>
+                C 180 AMG được Mercedes-Benz Việt Nam ra mắt ngày 8/3/2021
+            </i>
+            <hr>
+            <ul>
+                <li>
+                    Phiên bản C 180 AMG tại thị trường Việt Nam sở hữu nhiều thay đổi về thiết kế ngoại thất, được kỳ vọng sẽ trở thành chiếc xe đầu tiên trong đời của nhiều khách hàng và thu hút các chủ sở hữu nâng cấp từ xe phổ thông.
+                </li>
+                <li>
+                    Giá bán của C 180 AMG là 1,499,000,000₫ (đã bao gồm thuế GTGT), đi kèm chế độ bảo hành 3 năm, có thể mở rộng thành 5 năm.
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <div class="contentpager container">
+        <div class="aem-grid-content">
+            <div class="productpageheadline">
+                <div class="productpageheadline_inner">
+                    <h2 class="productpageheadline_topic text-left"><u>1/10/2020</u></h2>
+                    <div class="productpageheadline__headline text-left">Học viện Lái xe An toàn Mercedes-Benz 2020</div>
+                    <h3 class="productpageheadline__subheadline">
+                        <p class="p">Nâng tầm kỹ năng lái cùng Mercedes-Benz và AMG </p>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="TinTuc1">
+
+            <div class="thumbnail">
+                <img src="~/image/lái thử Mercedes-benz 2020.png" width="1000px">
+            </div>
+            <hr>
+            <h4><b>Nâng tầm kỹ năng lái cùng Mercedes-Benz và AMG</b></h4>
+            <h5>
+                TP.HCM - Học viện Lái xe An toàn Mercedes-Benz (MBDE) lần thứ 17 sẽ trở lại với khách hàng miền Nam. MBDE 2020 sẽ được tổ chức tại Trường đua Đại Nam, Bình Dương từ ngày 30/9 – 4/10. Các bài tập kỹ năng lái hướng về thể thao tốc độ
+                cùng dàn xe trải nghiệm đa dạng sẽ mang đến cho khách hàng những trải nghiệm giàu cảm xúc.
+            </h5>
+            <h5>Để đăng ký tham dự chương trình, khách hàng có thể liên hệ các Đại lý ủy quyền của Mercedes-Benz tại miền Nam ngay từ hôm nay.</h5>
+            <hr>
+            <h4><b>Trải nghiệm thể thao tốc độ đúng chuẩn</b></h4>
+            <h5>
+                MBDE đã trở nên quen thuộc với khách hàng trong nước sau 16 năm tổ chức. MBDE không chỉ là nơi để nâng cao kỹ năng lái xe an toàn, mà còn là dịp để khách hàng lái thử các sản phẩm mới của Mercedes-Benz. MBDE 2020 được thực hiện với
+                sự hướng dẫn của đội đua Red Line Racing team và Huấn luyện viên trưởng là Nguyễn Hồng Vinh – tay đua đầu tiên của Việt Nam được cấp bằng C của Liên đoàn ôtô quốc tế (FIA).
+            </h5>
+            <h5>
+                Nhằm đáp ứng nhu cầu trải nghiệm đa dạng của khách hàng, MBV sẽ thiết kế nội dung của MBDE 2020 thông qua 4 bài tập khác nhau. MBV mang đến sự kiện hơn 30 xe để khách hàng lái thử bao gồm cả sedan lẫn SUV, từ C 180 đến S 450 L, từ
+                GLC 200 đến GLS 450 4MATIC. Đáng chú ý, khách hàng có thể trải nghiệm mẫu xe hiệu năng cao Mercedes-AMG là A 35 4MATIC sedan. Khách hàng cũng sẽ có dịp khám phá mẫu xe SUV đô thị 7 chỗ ngồi vừa ra mắt – GLB cũng như mẫu xe thể
+                thao GT 53 4MATIC+ 4 cửa Coupé.
+            </h5>
+            <h5>MBDE 2020 cũng trưng bày những mẫu xe đã qua sử dụng chính hãng nhằm giúp khách hàng dễ dàng hơn trong việc tiếp cận và sở hữu một chiếc xe “Ngôi sao 3 cánh”.</h5>
+            <hr>
+            <h4><b>Từ đường đua đến đường phố</b></h4>
+            <h5>
+                Trường đua Đại Nam sẽ được tận dụng để các bài tập tại MBDE trở nên thú vị hơn và đậm chất thể thao tốc độ. 4 bài tập được thiết kế riêng cho MBDE 2020 bao gồm: Kiểm soát xe với vỏ Easy Drift (Cảm nhận hệ thống ESP); ‘Lead and follow’
+                (Qua cua theo vạch đường đua lý tưởng và giữ khoảng cách an toàn); Đua xe đường thẳng quay đầu (Luyện tập kỹ năng phanh gấp); Đua xe trên bề mặt ướt (Điều phối tốc độ và chân ga).
+            </h5>
+            <h5>
+                So với các năm trước, các bài tập năm nay có độ khó cao hơn cũng như đòi hỏi kỹ năng và sự tập trung của học viên nhiều hơn. Mercedes-Benz hy vọng những kỹ năng rèn luyện tại MBDE sẽ giúp các học viên sẽ tự tin hơn khi đối phó với
+                những tình huống nguy hiểm, cũng như nhận thức được những giới hạn an toàn khi lái xe hàng ngày.
+            </h5>
+            <h5>
+                MBDE 2020 được kỳ vọng sẽ huấn luyện và cấp chứng chỉ cho hơn 1.000 khách hàng và khách mời trên toàn quốc. 2 hãng lốp cao cấp MICHELIN và Good Year sẽ đồng hành cùng Học viện lái xe An toàn Mercedes-Benz 2020 với những chiếc lốp bám
+                đường và đáng tin cậy.
+            </h5>
+            <hr class="height = 10px">
+            <h5>*Lưu ý: Vì lý do an toàn, học viên không mang trẻ em đi cùng</h5>
+            <hr class="height = 15px">
+            <h5>
+                Liên hệ: Nguyễn Minh Tuấn, +848-35 889 419, tuan.nguyen_minh@daimler.com Đàm Mỹ Duyên, +848-35 889 455, duyen.dam_my@daimler.com (Nguyễn Nhật Minh pr)
+            </h5>
+        </div>
+    </div>
+
+</div>
+

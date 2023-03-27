@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyXe" Class="dbXeMerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-AJUH7R2\SQLEXPRESS2012;Initial Catalog=QuanLyXe;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QuanLyXeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ADMIN" Member="ADMINs">
+    <Type Name="ADMIN">
+      <Column Name="MaAdmin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TenDN" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Quyen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Xe" Member="Xes">
+    <Type Name="Xe">
+      <Column Name="MaXe" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoaiXe" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TenXe" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GiaXe" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AnhBia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NgayCapNhat" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MaClass" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Class_Xe" Member="Class" ThisKey="MaClass" OtherKey="MaClass" Type="Class" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTietDonDatHangDC" Member="ChiTietDonDatHangDCs">
+    <Type Name="ChiTietDonDatHangDC">
+      <Column Name="STT" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaDonHangDC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenDC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GiaDC" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="NgayDat" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DonDatHangDoChoi_ChiTietDonDatHangDC" Member="DonDatHangDoChoi" ThisKey="MaDonHangDC" OtherKey="MaDonHangDC" Type="DonDatHangDoChoi" IsForeignKey="true" />
+      <Association Name="KhachHang_ChiTietDonDatHangDC" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTietPhuKien" Member="ChiTietPhuKiens">
+    <Type Name="ChiTietPhuKien">
+      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenPhukien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AnhPhuKien" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Mota2" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaPhuKien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PhuKien_ChiTietPhuKien" Member="PhuKien" ThisKey="MaPhuKien" OtherKey="MaPhuKien" Type="PhuKien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Class" Member="Classes">
+    <Type Name="Class">
+      <Column Name="MaClass" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenClass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Class_Xe" Member="Xes" ThisKey="MaClass" OtherKey="MaClass" Type="Xe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoChoiXe" Member="DoChoiXes">
+    <Type Name="DoChoiXe">
+      <Column Name="MaDC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoaiDC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenDC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GiaDC" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AnhDC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NgayCapNhat" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MaLoaiDC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LoaiDoChoiXe_DoChoiXe" Member="LoaiDoChoiXe" ThisKey="MaLoaiDC" OtherKey="MaLoaiDC" Type="LoaiDoChoiXe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DonDatHang" Member="DonDatHangs">
+    <Type Name="DonDatHang">
+      <Column Name="MaDonHang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenTK" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgayDat" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LoaiXe" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TenXe" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="KhachHang_DonDatHang" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DonDatHangDoChoi" Member="DonDatHangDoChois">
+    <Type Name="DonDatHangDoChoi">
+      <Column Name="MaDonHangDC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenTK" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="DonDatHangDoChoi_ChiTietDonDatHangDC" Member="ChiTietDonDatHangDCs" ThisKey="MaDonHangDC" OtherKey="MaDonHangDC" Type="ChiTietDonDatHangDC" />
+      <Association Name="KhachHang_DonDatHangDoChoi" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHang" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="KhachHang_ChiTietDonDatHangDC" Member="ChiTietDonDatHangDCs" ThisKey="MaKH" OtherKey="MaKH" Type="ChiTietDonDatHangDC" />
+      <Association Name="KhachHang_DonDatHang" Member="DonDatHangs" ThisKey="MaKH" OtherKey="MaKH" Type="DonDatHang" />
+      <Association Name="KhachHang_DonDatHangDoChoi" Member="DonDatHangDoChois" ThisKey="MaKH" OtherKey="MaKH" Type="DonDatHangDoChoi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiDoChoiXe" Member="LoaiDoChoiXes">
+    <Type Name="LoaiDoChoiXe">
+      <Column Name="MaLoaiDC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenLoaiDC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="LoaiDoChoiXe_DoChoiXe" Member="DoChoiXes" ThisKey="MaLoaiDC" OtherKey="MaLoaiDC" Type="DoChoiXe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhuKien" Member="PhuKiens">
+    <Type Name="PhuKien">
+      <Column Name="MaPhuKien" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Phukien" Member="Phukien1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PhuKien_ChiTietPhuKien" Member="ChiTietPhuKiens" ThisKey="MaPhuKien" OtherKey="MaPhuKien" Type="ChiTietPhuKien" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="SHORTCUT ICON" href="~/image/icon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Script/JavaScriptThongBao.js"></script>
+
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/Script/js")*@
+
+
+    <style type="text/css">
+        body {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background-color: #c0baba;
+        }
+
+        .navbar-inverse {
+            background-color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: blue;
+                text-decoration: none;
+            }
+
+        .well {
+            padding: 0px;
+            width: 100%;
+            margin-bottom: 0px;
+            border: 0px;
+        }
+
+        .alert {
+            margin-bottom: 0px;
+        }
+
+            .alert alert-success {
+                position: absolute;
+            }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar-inverse">
+        <div class="container">
+
+            <div class="logo-top navbar-left">
+                <img src="~/image/logo.png" />
+            </div>
+            <div class="menu-head">
+                <div class="collapse navbar-collapse" id="navAdmin">
+                    <ul class="nav navbar-nav">
+                        <li><a href="@Url.Action("Index","HomeAdmin")">ADMIN</a> </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Quản Lý Chi Tiết</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="@Url.Action("Index","Xe")">Quản Lý Thông Tin Xe</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="@Url.Action("QLCLass","Xe")">Quản Lý Thông Tin Class</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="@Url.Action("QLPK","Xe")">Quản Lý Thông Tin Phụ Kiện</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="@Url.Action("QLDH","Xe")">Quản Lý Thông Tin Đơn Hàng</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="@Url.Action("QLDCX","Xe")">Quản Lý Sản Phẩm Phụ Kiện Xe</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="@Url.Action("QLDHDCX","Xe")">Quản Lý Đơn Hàng Phụ Kiện Xe</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        <li />
+
+                        <li><a href="@Url.Action("GroupClass","Search")">QUẢN LÝ CLASS</a></li>
+                        <li><a href="@Url.Action("Search","Search")">QUẢN LÝ XE</a></li>
+                        <li><a href="@Url.Action("GroupPhuKien","Search")">QUẢN LÝ PHỤ KIỆN</a> </li>
+                        <li><a href="@Url.Action("KhachHang","HomeAdmin")">QUẢN LÝ KHÁCH HÀNG</a></li>
+                        <li><a href="@Url.Action("DonDatHang","homeAdmin")">QUẢN LÝ LÁI THỬ</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        @Html.Action("LoginLogout", "HomeAdmin")
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div id="AlertBox" class="alert @TempData["AlertType"] hide" role="alert">
+            @TempData["AlertMessage"]
+        </div>
+    }
+
+    @RenderBody()
+
+    <footer class="container well">
+        <div style="text-align:center; background-color:#000000">
+            <img src="~/image/logo.png" />
+        </div>
+    </footer>
+</body>
+</html>

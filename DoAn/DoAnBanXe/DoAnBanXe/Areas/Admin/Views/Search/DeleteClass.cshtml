@@ -1,0 +1,76 @@
+﻿@model DoAnBanXe.Models.Class
+
+@{
+    ViewBag.Title = "Xóa Class";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    button, input, select, textarea {
+        border-radius: 60px;
+        outline: 0 !important;
+        font-size: 30px;
+        background-color: #3399FF;
+    }
+
+        input[type="submit"]:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        input[type="submit"]:active {
+            background-color: /*rgb(91 89 89 / 0.51)*/ #ffffff82;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+    .btn-primary {
+        background: -webkit-gradient(linear, left top, left bottom, from(#badff3), to(#7acbed));
+        border: 1px solid #7db0cc !important;
+    }
+
+    h2, h3 {
+        text-align: center;
+        color: red;
+        font-weight: bold;
+    }
+
+    .noidung {
+        margin-left: 38%;
+        margin-bottom: 400px;
+    }
+
+    hr {
+        border: 0px;
+    }
+
+    .form-actions {
+        margin-left: 50px;
+    }
+</style>
+
+<h2>Xóa Class</h2>
+
+<h3>Bạn Có Thật Sự Muốn Xóa CLass Này?</h3>
+
+<hr />
+<div class="noidung">
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenClass)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" />
+            @Html.ActionLink("Quay Về Trang Quản Lý Class", "QLCLass", "Xe")
+        </div>
+    }
+</div>

@@ -1,0 +1,84 @@
+﻿@using DoAnBanXe.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DoAnBanXe.Models.ChiTietPhuKien>
+
+@{
+    ViewBag.Title = "Quản Lý Phụ Kiện";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .table {
+        margin-bottom: 270px;
+    }
+</style>
+
+<h2>Quản Lý Phụ Kiện</h2>
+
+<p>
+    @Html.ActionLink("Thêm Phụ Kiện", "CreatePK", "Search")
+</p>
+<table class="table">
+    <tr>
+        <th width="130px">
+            Tên Phụ Kiện
+        </th>
+        <th width="100px">
+            Video
+        </th>
+        <th>
+            Tiêu Đề
+        </th>
+        <th>
+            Mô Tả
+        </th>
+        <th width="100px">
+            Mã Phụ Kiện
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenPhukien)
+            </td>
+            <td>
+                <video src="~/image/@item.AnhPhuKien" style="width: 50px;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa1)
+            </td>
+            <td width="500px">
+                @Html.DisplayFor(modelItem => item.Mota2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaPhuKien)
+            </td>
+            <td>
+                <a href="@Url.Action("EditPK","Search", new { id = item.Ma})" class="btn btn-primary" role="button">Sửa</a>
+                <a href="@Url.Action("DetailsPK","Search", new { id = item.Ma})" class="btn btn-primary" role="button">Chi Tiết</a>
+                <a href="@Url.Action("DeletePK","Search", new { id = item.Ma})" class="btn btn-primary" role="button">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("QLPK", new { page = page }))
+</div>
+<style>
+    .MenuTrang {
+        display: inline;
+        text-align: center;
+    }
+</style>

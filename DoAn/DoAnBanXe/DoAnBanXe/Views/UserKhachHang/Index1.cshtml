@@ -1,0 +1,163 @@
+﻿@using DoAnBanXe.Models
+@model DoAnBanXe.Models.KhachHang
+
+
+@{
+    ViewBag.Title = "Trang Cá Nhân";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style type="text/css">
+    h2 {
+        text-align: center;
+        margin: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: blue;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #ff0000;
+    }
+
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .noidung {
+        background: linear-gradient(to bottom right,#BEBEBE,#D3D3D3);
+        padding-bottom: 10px;
+        border-radius: 20px;
+        border: 3px solid #000000;
+        border-bottom: #000000 solid 10px;
+        border-left: #000000 solid 10px;
+        border-color: #000000;
+    }
+
+    .userpic img {
+        float: none;
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+        border-radius: 50% !important;
+    }
+
+    hr {
+        border: 10px solid none;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .menu-button {
+        outline: 0 !important;
+        text-align: center;
+    }
+
+    .btn-success:hover {
+        color: #fff;
+        background-color: #0094ff;
+        border-color: #00ffff;
+        background: -webkit-gradient(linear, left top, left bottom, from(#badff3), to(#7acbed));
+        outline: 0 !important;
+    }
+
+    .btn-success {
+        border: 2px solid #7db0cc !important;
+    }
+
+    .user-menu ul li a {
+        color: #93a3b5;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+
+        .user-menu ul li a:hover {
+            color: #5b9bd1;
+            background-color: #f6f9fb;
+            border-left: 2px solid #5b9bd1;
+            margin-left: -2px;
+        }
+
+    .noidung1 {
+        text-align: center;
+        background: /*#ffffff*/ linear-gradient(to bottom right,#B0B0B0, #F8F8F8,#E8E8E8);
+        padding-bottom: 72px;
+        border-radius: 20px;
+        border: 3px solid #000000;
+        padding-top: 122px;
+    }
+
+    .btn-success {
+        color: #000000;
+        background: linear-gradient(to bottom right,#F0FFFF,#F0F8FF);
+        border-color: #4cae4c;
+    }
+
+    .trai {
+        padding-bottom: 30px;
+    }
+</style>
+
+<div class="container">
+    <h2>THÔNG TIN CÁ NHÂN</h2>
+
+    @{
+        KhachHang kh = (KhachHang)Session["TaiKhoan"];
+    }
+
+    <div class="row">
+        <div class="trai col-md-3">
+            <div class="noidung">
+                <div class="userpic">
+                    <img src="~/image/profile_user.png" class="img-responsive" alt="Thông Tin Cá Nhân" />
+                </div>
+                <hr />
+
+                <div class="name">
+                    @kh.TaiKhoan
+                </div>
+                <div class="menu-button">
+                    <a href="@Url.Action("Index","Home")"><input type="button" class="btn btn-success" value="Trang Chủ" /></a>
+                </div>
+                <hr />
+                <div class="user-menu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="@Url.Action("CapNhatThongTin", "UserKhachHang", new { id = kh.MaKH })">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                                Cập Nhật Thông Tin Cá Nhân
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("CapNhatDonHang", "UserKhachHang", new { id = kh.MaKH})">
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                Quản Lý Đơn Hàng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="phai col-md-9">
+            <div class="noidung1">
+                <h3>Bạn Không Có Đơn Hàng Nào</h3>
+                <i>Cùng Tìm Mặc Hàng Ưng Ý Nào </i>
+                <hr />
+                <div class="menu-button">
+                    <a href="@Url.Action("DoChoiXe","Home")"><input type="button" class="btn btn-success" value="Sản Phẩm" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

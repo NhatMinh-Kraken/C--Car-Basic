@@ -1,0 +1,206 @@
+﻿
+@{
+    ViewBag.Title = "Chi Tiết Xe";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style type="text/css">
+    .thumbnail {
+        background-color: #000000;
+    }
+
+    .TenXe {
+        margin: 0px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .left-haidai {
+        width: 55%;
+        float: left;
+        position: relative;
+    }
+
+    .title-haudai {
+        color: #181f35;
+        font-family: 'Cabin-bold';
+        padding: 5px 0px;
+        font-size: 30px;
+    }
+
+    .right-haidai {
+        text-align: center;
+    }
+
+        .right-haidai ul {
+            padding-top: 10px;
+            width: 40%;
+            float: right;
+            text-align: left;
+            list-style: none;
+        }
+
+        .right-haidai li {
+            padding: 5px;
+            font-family: 'cabin';
+            font-size: 18px;
+        }
+
+        .right-haidai ul li {
+            padding-left: 35px;
+        }
+
+    .zoom {
+        position: relative;
+        /*overflow: hidden;*/
+        transition: all 1s ease;
+        padding: 10px 10px 0;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+    }
+
+        .zoom img {
+            width: 100%;
+            /** Hình ảnh rộng 100% so với vùng chứa **/
+            transition: all 1s;
+        }
+
+        .zoom:hover img {
+            transform: scale(1.5, 1.5);
+            -webkit-transform: scale(1.5, 1.5);
+            -moz-transform: scale(1.5, 1.5);
+            -o-transform: scale(1.5, 1.5);
+            -ms-transform: scale(1.5, 1.5);
+        }
+
+    /* .zoom:hover .thumbnail .View-detail a {
+            bottom: 0;
+        }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: blue;
+            text-decoration: none;
+        }*/
+
+    hr {
+        border-top: 0px;
+    }
+
+
+
+    /* .thumbnail .View-detail a {
+        text-decoration: none;
+        color: #ffffff;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -80px;
+        background-color: rgba(0,0,0,0.4);
+        text-align: center;
+        line-height: 80px;
+        transition: all 0.45s ease;
+        display: block;
+        -webkit-transition: all 0.45s ease;
+        -moz-transition: all 0.45s ease;
+        -o-transition: all 0.45s ease;
+    }
+
+    .thumbnail .View-detail a:hover {
+        background-color: rgba(255,51,102,0.5);
+    }
+
+    i {
+        padding-right: 7px;
+    }*/
+
+    button.btn {
+        border-radius: 10px;
+        outline: 0 !important;
+        background: #ff6a00;
+        border: #ff0000 solid 2px;
+    }
+
+        button.btn:hover {
+            background: #ff0000;
+            border: #ffd800 solid 2px;
+        }
+
+    .card {
+        border-radius: 10px;
+        border: #ff0000 solid 3px;
+        margin: 5px;
+        background: #ffffff;
+    }
+
+    p {
+        margin: 2px 6px 10px;
+    }
+</style>
+<div class="container">
+    <div class="haudai">
+        <div class="box-haudai">
+            <div class="TenXe ">
+                <hr />
+                @Model.TenXe
+            </div>
+            <div class="left-haidai">
+                <div class="zoom">
+                    <div class="thumbnail">
+                        <img src="~/image/@Model.AnhBia" alt="@Model.TenXe" />
+                        @*<div class="View-detail">
+                                <a href="#" title="View Detail"><i class="bi bi-zoom-in"></i>ZOOM</a>
+                            </div>*@
+                    </div>
+                </div>
+
+                <div id="my-div"></div>
+            </div>
+            <div class="right-haidai container">
+                <div class="title-haudai">
+                    <font color="RED">THÔNG TIN CHI TIẾT</font>
+                </div>
+                <ul>
+                    <li><i class="bi bi-star-fill"></i><font color="#daa520" text-center> @Model.LoaiXe </font></li>
+                    <li>
+                        TÊN XE:<font color="red"> @Model.TenXe </font>
+                    </li>
+
+                    <li>
+                        GIÁ CÔNG BỐ:<font color="red"> @Model.GiaXe.ToString("#,##") VNĐ</font> @*<i class="bi bi-currency-dollar">*@</i>
+                    </li>
+                    <li>
+                        <img src="~/image/itemCamKet.png" alt="" /> Cam Kết Chất Lương
+                    </li>
+                    <li>
+                        <img src="~/image/itemCheDoBaoHanh.png" alt="" /> Chế Độ Bảo Hành
+                    </li>
+                    <li>
+                        <img src="~/image/tiemDichVuSuaChua.png" alt="" /> Dịch Vụ & Sửa Chửa
+                    </li>
+                    <li>
+                        <img src="~/image/iemDangKyDichVu.png" alt="" /> <a href="@Url.Action("LaiThu","Use")">Đăng Ký Lái Thử</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button aria-expanded="false" class="btn"
+            data-toggle="collapse" data-target="#ThongTin">
+        Xem Thêm...
+    </button>
+    <hr />
+    <div class="collapse mt-4" id="ThongTin">
+        <div class="card">
+            <p class="cart-text"> @Html.Raw(Model.MoTa.ToString().Replace("\n", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))</p>
+        </div>
+    </div>
+</div>
+}

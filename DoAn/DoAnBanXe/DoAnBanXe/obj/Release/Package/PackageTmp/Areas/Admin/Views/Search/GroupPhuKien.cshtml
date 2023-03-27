@@ -1,0 +1,61 @@
+﻿@model IEnumerable<IGrouping<int?, DoAnBanXe.Models.ChiTietPhuKien>>
+
+
+@{
+    ViewBag.Title = "Quản Lý Phụ Kiện";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+
+    .group-class {
+        text-align: center;
+    }
+
+        .group-class td {
+            color: aliceblue;
+            text-align: center;
+            width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    hr {
+        border: 0px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+</style>
+
+<h2>DANH SÁCH PHỤ KIỆN</h2>
+
+
+
+@foreach (var item in Model)
+{
+    <div class="group-class">
+        <h4 style="font-weight:bold; color:#0026ff;">Mã Phụ Kiện @item.Key</h4>
+        <table border="1">
+            <tr style="background-color:#000000; font-weight:bold;">
+                <td>Mã Phụ Kiện</td>
+                <td>Phụ Kiện</td>
+                <td>Mô Tả</td>
+            </tr>
+            @foreach (var ctphukien in item)
+            {
+                <tr>
+                    <td>
+                        @ctphukien.MaPhuKien
+                    </td>
+
+                    <td>@ctphukien.TenPhukien</td>
+                    <td>@ctphukien.Mota2</td>
+                </tr>
+            }
+        </table>
+        <hr />
+    </div>
+}
+

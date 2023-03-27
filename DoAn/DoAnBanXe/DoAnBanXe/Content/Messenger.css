@@ -1,0 +1,90 @@
+.hostline-messenger{
+    display: flex;
+    width: 5%;
+    position: fixed;
+    bottom: 35%;
+    left: 20px;
+    z-index: 999;
+    align-items:center;
+    justify-content:center;  
+}
+
+.hostline-messenger a {
+    display:block;
+    width:60px;
+    height:60px;
+    background:#ffffff;
+    border-radius:50%;
+    position:relative;
+}
+
+    .hostline-messenger a:before {
+       content:'';
+       position:absolute;
+       width:100px;
+       height:100px;
+       background:#0026ff;
+       left:-20px;
+       top:-20px;
+       opacity:0.2;
+       border-radius:50%;
+       animation:2s infinite phone-bg-animation;
+    }
+
+    
+
+    .hostline-messenger a img {
+        position:absolute;
+        width:30px;
+        height:30px;
+        top:15px;
+        left:15px;
+        animation: 1.5s infinite phone-animation;
+    }
+@keyframes phone-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(25deg);
+    }
+
+    20% {
+        transform: rotate(-25deg);
+    }
+
+    30% {
+        transform: rotate(25deg);
+    }
+
+    40% {
+        transform: rotate(-25deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+
+}
+
+@keyframes phone-bg-animation{
+
+    0% {
+         transform: scale(0.7);
+    }
+
+    50%{
+        transform: scale(1);
+    }
+
+
+    100% {
+        transform:scale(0.7);
+    }
+}

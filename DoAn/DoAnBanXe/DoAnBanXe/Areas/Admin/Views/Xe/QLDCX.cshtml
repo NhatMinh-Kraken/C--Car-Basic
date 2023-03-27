@@ -1,0 +1,143 @@
+﻿@using DoAnBanXe.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<DoAnBanXe.Models.DoChoiXe>
+
+@helper Truncate(string s, int lenght)
+{
+    if (s.Length < lenght)
+    {
+        @s
+    }
+    else
+    {
+        @s.Substring(0, lenght)
+    }
+}
+
+@{
+    ViewBag.Title = "Quản Lý Đồ Chơi Xe";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+
+
+    table {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .table {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    hr {
+        border: 0px;
+    }
+
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        padding: 9px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 4px solid #000000;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    button, input, select, textarea {
+        border-radius: 60px;
+        outline: 0 !important;
+        font-size: 30px;
+        background-color: #3399FF;
+    }
+
+    .btn-warning:active {
+        background: -webkit-gradient(linear, left top, left bottom, from(#badff3), to(#7acbed));
+        border: 1px solid #7db0cc !important;
+    }
+
+    .btn-warning:hover {
+        background-color: /*rgb(91 89 89 / 0.51)*/ #456ce2;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+    .btn {
+        border-radius: 20px;
+        border: 0px;
+    }
+</style>
+
+<h2 style="text-align:center;">Quản Lý Thông Tin Phụ Kiện</h2>
+
+<p>
+    @Html.ActionLink("Thêm Sản Phẩm", "CreateDC", "Search")
+</p>
+
+<div class="bang">
+    <hr />
+    <table class="table">
+        <tr>
+            <th style="text-align: center; width:120px;">Mã Phụ Kiện</th>
+            <th style="text-align: center; width:150px;">Mã Loại Phụ Kiện</th>
+            <th style="text-align: center; width:150px;">Loại Phụ Kiện</th>
+            <th style="text-align: center; width:250px;">Tên Phụ Kiện</th>
+            <th style="text-align: center; width:125px;">@*@Html.DisplayNameFor(model => model.First().GiaDC)*@Giá Phụ Kiện</th>
+            <th style="text-align: center; width:130px;">@*@Html.DisplayNameFor(model => model.First().AnhDC)*@Ảnh Phụ Kiện</th>
+            <th style="text-align: center; width:470px;">Mô Tả</th>
+            <th style="text-align: center; width:100px;">Ngày Cập Nhật</th>
+            <th style="text-align: center; width:250px;">Menu</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaDC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaLoaiDC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoaiDoChoiXe.TenLoaiDC)
+                </td>
+                <td>
+                    @*cắt tên sách lấy 50 ký tự*@
+                    @Truncate(item.TenDC, 100)
+                </td>
+                <td>
+                    @Html.FormatValue(item.GiaDC, "{0:#,##0}")
+                </td>
+                <td>
+                    <img src="~/image/@item.AnhDC" style="width:100%;" />
+                </td>
+                <td>
+                    @Html.Raw(item.MoTa.ToString().Replace("\n", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+                </td>
+                <td>
+                    @Html.FormatValue(item.NgayCapNhat, "{0:dd/MM/yyyy}")
+                </td>
+                <td>
+                    <a href="@Url.Action("EditDC","Search",new { id = item.MaDC})" class="btn btn-warning" role="button">Sửa</a>
+                    <a href="@Url.Action("DetailDC","Search",new { id = item.MaDC})" class="btn btn-warning" role="button">Chi Tiết</a>
+                    <a href="@Url.Action("DeleteDC","Search",new { id = item.MaDC})" class="btn btn-warning" role="button">Xóa</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("QLDCX", new { page = page }))
+</div>
+
+<style>
+    .MenuTrang {
+        display: inline;
+        text-align: center;
+    }
+</style>

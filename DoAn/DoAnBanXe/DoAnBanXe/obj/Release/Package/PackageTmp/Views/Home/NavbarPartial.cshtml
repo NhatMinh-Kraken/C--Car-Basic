@@ -1,0 +1,112 @@
+﻿@model IEnumerable<DoAnBanXe.Models.Class>
+@using DoAnBanXe.Models;
+
+<style type="text/css">
+
+    a.classname
+
+    .container {
+        width: 970px;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: blue;
+            text-decoration: none;
+        }
+
+    hr {
+        border-top: 0px solid #eee;
+        margin-top: 4px;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-menu {
+        /* background-color:#000000;*/
+    }
+
+        .dropdown-menu > li > a {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            font-weight: 400;
+            line-height: 1.42857143;
+            color: #333;
+            white-space: nowrap;
+        }
+</style>
+
+<nav class="navbar-inverse">
+    <div class="container">
+
+        <div class="logo-top navbar-left">
+            <a href='@Url.Action("Index", "Home")'>
+                <img src='@Url.Content("~/image/logo.png")' />
+            </a>
+        </div>
+        <div class="menu-head">
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="nav navbar-nav">
+                    <li>
+                        @Html.ActionLink("Giới Thiệu", "GioiThieu", "Home")
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Xe Mercedes<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            @foreach (var MaClass in Model)
+                            {
+                                <li><a href="@Url.Action( "XeTheoClass", "Home", new { MaClass = MaClass.MaClass})">@MaClass.TenClass</a></li>
+                                <li role="separator" class="divider"></li>
+
+                            }
+                        </ul>
+                    </li>
+
+                    <li>
+                        @Html.ActionLink("Phụ Kiện Xe Chính Hãng", "DoChoiXe", "Home")
+                    </li>
+
+                    <li>
+                        @Html.ActionLink("Tin Tức & Khuyến Mãi", "TinTucKhuyenMai", "Home")
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Khách Hàng Cần Biết</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Bảo Dưỡng Xe Chuyên Nghiệp", "BaoDuongXeChuyenNghiep", "Home")</li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-submenu">
+                                <a class="test" href="#">Phụ Tùng & Dầu Chính Hãng <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Phụ Kiện - Chính Hãng", "PhuTung", "Home")</li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>@Html.ActionLink("Dầu", "Dau", "Home")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        @Html.ActionLink("Đăng Ký Lái Thử", "LaiThu", "Use")
+                    </li>
+
+                </ul>
+                <hr />
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.Action("GioHangPartial", "GioHang")</li>
+                    <li class="dropdown-submenu">
+                        <a class="test" href="#">LOGIN <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.Action("LoginLogout", "Home")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>

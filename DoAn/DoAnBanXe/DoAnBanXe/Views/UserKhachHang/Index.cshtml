@@ -1,0 +1,156 @@
+﻿@using DoAnBanXe.Models
+@model DoAnBanXe.Models.KhachHang
+
+
+@{
+    ViewBag.Title = "Trang Cá Nhân";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style type="text/css">
+    h2 {
+        text-align: center;
+        margin: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: red;
+    }
+
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .noidung {
+        background: #badff3;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        border: 3px solid #000000;
+        border-bottom: #000000 solid 10px;
+        border-left: #000000 solid 10px;
+        border-color: #000000;
+    }
+
+    .userpic img {
+        float: none;
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+        border-radius: 50% !important;
+    }
+
+    hr {
+        border: 10px solid none;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .menu-button {
+        outline: 0 !important;
+        text-align: center;
+    }
+
+    .btn-success:hover {
+        color: #fff;
+        background-color: #0094ff;
+        border-color: #00ffff;
+        background: -webkit-gradient(linear, left top, left bottom, from(#badff3), to(#7acbed));
+        outline: 0 !important;
+    }
+
+    .btn-success {
+        border: 2px solid #7db0cc !important;
+    }
+
+    .btn-success {
+        color: #000000;
+        background: linear-gradient(to bottom right,#F0FFFF,#F0F8FF);
+        border-color: #4cae4c;
+    }
+
+    .user-menu ul li a {
+        color: #93a3b5;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+
+        .user-menu ul li a:hover {
+            color: #5b9bd1;
+            background-color: #f6f9fb;
+            border-left: 2px solid #5b9bd1;
+            margin-left: -2px;
+        }
+
+    .noidung1 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+        .noidung1 img {
+            padding-top: 10%;
+            width: 20%;
+            height: 20%;
+        }
+
+    .trai {
+        padding-bottom: 30px;
+    }
+
+    div#wapper {
+        background: radial-gradient(#030872, #027cad, #87faf7);
+    }
+</style>
+
+<div class="container">
+    <h2>THÔNG TIN CÁ NHÂN</h2>
+
+    @{
+        KhachHang kh = (KhachHang)Session["TaiKhoan"];
+    }
+
+    <div class="row">
+        <div class="trai col-md-3">
+            <div class="noidung">
+                <div class="userpic">
+                    <img src="~/image/profile_user.png" class="img-responsive" alt="Thông Tin Cá Nhân" />
+                </div>
+                <hr />
+
+                <div class="name">
+                    @kh.TaiKhoan
+                </div>
+                <div class="menu-button">
+                    <a href="@Url.Action("Index","Home")"><input type="button" class="btn btn-success" value="Trang Chủ" /></a>
+                </div>
+                <hr />
+                <div class="user-menu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="@Url.Action("CapNhatThongTin", "UserKhachHang", new { id = kh.MaKH })">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                                Cập Nhật Thông Tin Cá Nhân
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("CapNhatDonHang", "UserKhachHang", new { id = kh.MaKH})">
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                Quản Lý Đơn Hàng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="phai col-md-9">
+            <div class="noidung1">
+                <img src="~/image/logo.png" />
+            </div>
+        </div>
+    </div>
+</div>

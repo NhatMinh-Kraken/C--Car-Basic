@@ -1,0 +1,492 @@
+﻿@using DoAnBanXe.Models
+@model List<GioHang>
+
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style type="text/css">
+
+    div#wapper {
+        width: 100%;
+        background: #efeeee;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .sp {
+        color: #000000;
+        width: 49.2795%;
+    }
+
+    .dg {
+        width: 15.8802%;
+        text-align: center;
+    }
+
+    .sl {
+        width: 13.4265%;
+        text-align: center;
+    }
+
+    .tt {
+        width: 18.4356%;
+        text-align: center;
+    }
+
+    .khung-sanpham {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        box-shadow: rgb(0 0 0 / 5%) 0px 1px 1px 0px;
+        overflow: hidden;
+        border-radius: 3px;
+        height: 55px;
+        font-size: 14px;
+        background: rgb(255, 255, 255);
+        text-transform: capitalize;
+        margin-bottom: 12px;
+        color: rgb(136, 136, 136);
+        padding: 0px 20px;
+    }
+
+    .khung-sanpham2 {
+        box-shadow: rgb(0 0 0 / 5%) 0px 1px 1px 0px;
+        border-radius: 0.125rem;
+        background: rgb(255, 255, 255);
+        margin-bottom: 20px;
+        overflow: visible;
+    }
+
+    .pcmall-cart_2fmP_J {
+        position: relative;
+        padding-bottom: 1px;
+    }
+
+    .pcmall-cart_2WRAo3 {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
+        display: block;
+        padding: 0px 20px 15px;
+        margin-top: 15px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .pcmall-cart_3tIdn3 {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .pcmall-cart_3yOOlh {
+        width: 49.03811%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .pcmall-cart_1MAheh {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .pcmall-cart_374Dh7 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 5px 20px 0 10px;
+        font-size: 14px;
+        line-height: 16px;
+        width: 345.5px;
+        overflow: hidden;
+    }
+
+    .pcmall-cart_2qNxkh {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 17.24138%;
+    }
+
+    .pcmall-cart_EvSqEP {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+
+    .pcmall-cart__KPS3Z {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 15.88022%;
+        margin-bottom: 45px;
+    }
+
+    .pcmall-cart_1xr2Cd {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 15.4265%;
+    }
+
+    .pcmall-cart_2PT30o pcmall-cart_2EZkQG {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 12.70417%;
+        text-transform: capitalize;
+    }
+
+    .pcmall-cart_3c9Pjg {
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .pcmall-cart_3Opdjb {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    input[type="submit"] {
+        border: none;
+        margin: 3px 0px;
+        border-bottom: #000 solid 3px;
+        background: #ff6a00;
+        padding: 4px;
+        border-radius: 20px;
+        width: 90%;
+        color: aliceblue;
+        outline: 0 !important;
+    }
+
+    .input[type="submit"] {
+        width: 20%;
+        border-bottom: #ffffff solid 3px;
+        background: #000;
+        border-color: #ffffff;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    input[type="submit"]:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        color: red;
+        border: red;
+    }
+
+    input[type="submit"]:active {
+        background-color: /*rgb(91 89 89 / 0.51)*/ #ffffff82;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+    h2 {
+        color: #ff6a00;
+        letter-spacing: .05em;
+        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .pcmall-cart_W6xIbS {
+        padding: 0 12px 0 20px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: row-reverse;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        min-width: 58px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-top: 15px;
+    }
+
+    .pcmall-cart_1XDN4G {
+        /*z-index: 2;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;*/
+        background: rgb(255, 255, 255);
+    }
+
+    .pcmall-cart_33imTl {
+        padding: 12px 0;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        -ms-grid-column-span: 3;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 100%;
+    }
+
+    .pcmall-cart_1mRjyq {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        color: #ff6a00;
+    }
+
+    .pcmall-cart_12FVk2 {
+        margin-left: 20px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .pcmall-cart_D3qtyx {
+        font-size: 16px;
+        color: #222222;
+        line-height: 19px;
+        margin-right: 60px;
+        color: red;
+    }
+
+    .pcmall-cart_2PT30o img {
+        width: 50%;
+        height: 100%;
+    }
+
+
+
+
+    button {
+        margin: 3px 0px;
+        background: red;
+        padding: 4px;
+        color: rgb(255, 255, 255);
+        outline: 0 !important;
+    }
+
+        button a {
+            background: red;
+            color: rgb(255, 255, 255);
+            outline: 0 !important;
+        }
+</style>
+
+<div class="sanpham container">
+    <h2 style="text-align:center;">THÔNG TIN GIỎ HÀNG</h2>
+    <div class="khung-sanpham">
+        <div class="sp">Sản Phẩm</div>
+        <div class="dg">Đơn Giá</div>
+        <div class="sl">Số Lượng</div>
+        <div class="tt">Thành Tiền</div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="khung-sanpham2">
+            <div class="pcmall-cart_2fmP_J">
+                <div class="pcmall-cart_2WRAo3">
+                    <div class="pcmall-cart_3tIdn3">
+                        <div class="pcmall-cart_3yOOlh">
+                            <div class="pcmall-cart_1MAheh">
+                                <img src="~/image/@item.AnhDC" alt="@item.TenDC" width="100px" />
+                                <div class="pcmall-cart_374Dh7">
+                                    @item.TenDC
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="pcmall-cart_2qNxkh">
+                                <div class="pcmall-cart_EvSqEP">
+                                    @item.LoaiDC
+                                    <div></div>
+                                </div>
+                            </div>*@
+                        <div class="pcmall-cart__KPS3Z">
+                            @string.Format("{0:#,##0,0}", @item.DonGia) VNĐ
+                        </div>
+                        <div class="pcmall-cart_1xr2Cd">
+                            <div class="pcmall-cart_3Opdjb shopee-input-quantity">
+                                @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { MaDC = item.MaDC }))
+                                {
+                                    <input type="number" min="1" name="txtSoLuong" value="@item.SoLuong" />
+                                    <div>
+                                        <input type="submit" value="Cập nhật" />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="pcmall-cart__KPS3Z">
+                            @string.Format("{0:#,##0,0}", @item.ThanhTien) VNĐ
+                        </div>
+                        <div class="pcmall-cart_2PT30o">
+                            @Html.ActionLink("Xóa", "XoaSPKhoiGioHang", new { @MaDC = item.MaDC })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="pcmall-cart_1XDN4G">
+        <div class="pcmall-cart_33imTl">
+            <div class="pcmall-cart_W6xIbS">
+                <div class="pcmall-cart_2PT30o">
+                    <img src="~/image/logo.png" />
+
+                    @*@Html.ActionLink("Xóa Hết Sản Phẩm", "XoaGioHang")*@
+                </div>
+
+            </div>
+            <div class="pcmall-cart_1mRjyq">
+                <p>Phụ Kiện MERCEDES-BENZ chính hãng</p>
+                <i>Kính Chào Quý Khách</i>
+            </div>
+            <div class="pcmall-cart_12FVk2">
+                <div class="pcmall-cart_D3qtyx">
+                    Tổng Thanh Toán ( @ViewBag.TongSoLuong Sản Phẩm): @string.Format("{0:#,##0,0}", @ViewBag.TongTien) VNĐ
+                </div>
+
+                <div class="pcmall-cart_D3qtyx">
+                    <button> <a href=" @Url.Action("DatHang", "GioHang")">Đặt Hàng</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

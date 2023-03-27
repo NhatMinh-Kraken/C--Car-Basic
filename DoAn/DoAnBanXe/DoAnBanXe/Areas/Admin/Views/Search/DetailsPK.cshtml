@@ -1,0 +1,85 @@
+﻿@model DoAnBanXe.Models.ChiTietPhuKien
+
+@{
+    ViewBag.Title = "Xem Chi Tiết Phụ Kiện";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    hr {
+        border: 0px;
+        margin: 0px;
+    }
+
+    h2 {
+        text-align: center;
+        color: red;
+    }
+
+    .duoi {
+        text-align: center;
+    }
+
+    dl {
+        margin-top: 3%;
+        margin-bottom: 18%;
+    }
+</style>
+
+
+<h2>Chi Tiết Phụ Kiện</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Tên Phụ Kiện
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenPhukien)
+        </dd>
+
+        <dt>
+            Video Phụ Kiện
+        </dt>
+
+        <dd>
+            <video src="~/image/@Model.AnhPhuKien" alt="@Model.TenPhukien" width="100px;"></video>
+        </dd>
+
+        <dt>
+            Tiêu Đề
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa1)
+        </dd>
+
+        <dt>
+            Mô tả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota2)
+        </dd>
+
+        <dt>
+            Mã Phụ Kiện
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaPhuKien)
+        </dd>
+
+    </dl>
+</div>
+<div class="duoi">
+    <p>
+        @Html.ActionLink("Sửa Phụ Kiện", "EditPK", new { id = Model.Ma })
+        <hr>
+        @Html.ActionLink("Quay Lại Trang Quản Lý Phụ Kiện", "QLPK", "Xe")
+    </p>
+</div>

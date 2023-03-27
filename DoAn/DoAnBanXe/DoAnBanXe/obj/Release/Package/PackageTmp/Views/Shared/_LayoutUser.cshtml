@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="SHORTCUT ICON" href="~/image/icon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href="~/Content/Messenger.css" rel="stylesheet" />
+    <link href="~/Content/zalo.css" rel="stylesheet" />
+    <link href="~/Content/phone.css" rel="stylesheet" />
+    <script src="~/Scripts/JavaScriptThongBao.js"></script>
+    <style type="text/css">
+
+
+        ul {
+            margin: 0px;
+        }
+
+        body {
+            position: relative;
+            margin: auto;
+        }
+
+        div#wapper {
+            margin: auto;
+            width: 100%;
+            background: #CCCCCC;
+            height: 100%;
+        }
+
+        #footer .container {
+            width: 1170px;
+        }
+
+        .container {
+            max-width: 100%;
+        }
+
+        .imgbook {
+            transition: all 1s ease-in;
+        }
+
+            .imgbook:hover {
+                transform: scale(0.9);
+                cursor: pointer;
+            }
+
+        .navbar-inverse {
+            background-color: #000;
+            border-color: #000;
+        }
+
+        div#wap_footer {
+            background: #000;
+            width: 100%;
+            color: #ffffff;
+            text-align: center;
+            margin: auto;
+            position: absolute;
+        }
+
+        div.menu-f {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            z-index: 9999;
+            text-align: center;
+        }
+
+        #footer {
+            width: 100%;
+        }
+
+            #footer .menu-head-f {
+                margin-left: 8%;
+            }
+
+        div.menu-f {
+            list-style: none;
+            margin: 0px;
+            line-height: 70px;
+        }
+
+            div.menu-f ul li a {
+                color: #ffffff;
+                font-size: 14px;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding-bottom: 7px;
+                position: relative;
+            }
+
+            div.menu-f ul li {
+                float: left;
+                position: relative;
+                z-index: 50;
+                padding: 1px 12px;
+                list-style-type: none;
+            }
+
+        .list-contact {
+            display: inline-block;
+            padding-top: 10px;
+        }
+
+            .list-contact a {
+                padding: 6px 7px;
+                color: #000;
+                background: #ffffff;
+                border-radius: 50%;
+                margin-right: 7px;
+            }
+
+        .cpr {
+            border-top: #ffffff;
+            background: #000;
+            padding: 10px 0px;
+        }
+
+            .cpr div div {
+                width: 100%;
+                float: left;
+                color: #ffffff;
+            }
+
+        img {
+            vertical-align: middle;
+            border: 0;
+            max-width: 100% !important;
+            height: auto;
+        }
+
+        #footer > div.container {
+            padding: 30px 0px;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+            .dropdown-submenu > .dropdown-menu {
+                top: 0;
+                left: 100%;
+                margin-top: -6px;
+                margin-left: -1px;
+                -webkit-border-radius: 0 6px 6px 6px;
+                -moz-border-radius: 0 6px 6px 6px;
+                border-radius: 0 6px 6px 6px;
+            }
+
+            .dropdown-submenu:hover > .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-submenu > a:after {
+                display: block;
+                content: " ";
+                float: right;
+                width: 0;
+                height: 0;
+                border-color: transparent;
+                border-style: solid;
+                border-width: 5px 0 5px 5px;
+                border-left-color: #cccccc;
+                margin-top: 5px;
+                margin-right: -10px;
+            }
+
+            .dropdown-submenu:hover > a:after {
+                border-left-color: #ffffff;
+            }
+
+            .dropdown-submenu.pull-left {
+                float: none;
+            }
+
+                .dropdown-submenu.pull-left > .dropdown-menu {
+                    left: -100%;
+                    margin-left: 10px;
+                    -webkit-border-radius: 6px 0 6px 6px;
+                    -moz-border-radius: 6px 0 6px 6px;
+                    border-radius: 6px 0 6px 6px;
+                }
+
+        .alert alert-success {
+            position: absolute;
+        }
+
+        .alert {
+            margin-bottom: 0px;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            background: url(../../image/back_to_top.png) top center no-repeat;
+            background-color: #ffffff;
+            width: 45px;
+            height: 45px;
+            text-align: center;
+            border: #000 solid 3px;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            transition: background-color .3s, opacity .5s, visibility .5s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+            .back-to-top:hover {
+                background-color: #ff6a00;
+                border: #fefe02 solid 3px;
+            }
+
+            .back-to-top::after {
+                content: '';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 2em;
+                line-height: 50px;
+                color: #ffffff;
+                cursor: pointer;
+            }
+
+        .show-back-to-top {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div id="wapper">
+
+        <button class="back-to-top"></button>
+
+        <div class="hostline-phone">
+            <a href="tel:0396764757"><img src="~/image/phone.svg" alt="Phone icon" /></a>
+        </div>
+
+        <div class="hostline-zalo">
+            <a href="https://zalo.me/0396764757"><img src="~/image/zalo.svg" alt="Zalo icon" /></a>
+        </div>
+
+        <div class="hostline-messenger">
+            <a href="https://www.facebook.com/nguyen.riven.35/"><img src="~/image/messenger.svg" alt="Messenger icon" /></a>
+        </div>
+
+
+        @* navbar *@
+        @Html.Action("NavbarPartial", "Home")
+        @* kết thúc navbar *@
+
+
+
+        <div>
+            @if (TempData["AlertMessage"] != null)
+            {
+                <div id="AlertBox" class="alert @TempData["AlertType"] hide" role="alert">
+                    @TempData["AlertMessage"]
+                </div>
+            }
+
+            @RenderBody()
+        </div>
+
+        @* footer *@
+        <div id="wap_footer">
+            <div id="footer">
+                <div class="container">
+                    <div class="menu-f only-pc container">
+                        <div class="menu-head-f menu-pc-f">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        @Html.ActionLink("Trang Chủ", "Index", "Home")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Giới Thiệu", "GioiThieu", "Home")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Xe Mercedes", "SanPham", "Home")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Phụ Kiện", "DoChoiXe", "Home")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Tin Tức & Khuyến Mãi", "TinTucKhuyenMai", "Home")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Khách Hàng Cần Biết", "BaoDuongXeChuyenNghiep", "Home")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Đăng Ký Lái Thủ", "LaiThu", "Use")
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item-contact">
+                    <div class="list-contact">
+                        <a href="https://www.facebook.com/">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://www.google.com/">
+                            <i class="bi bi-google"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cpr">
+                <div class="container">
+                    <div class="text-center">
+                        <p>Họ & Tên: Nguyễn Nhật Minh</p>
+                        <p>Lớp: D19PM02</p>
+                        <p>Môn: Lập Trình Web T1301-HK3.CQ.01</p>
+                        <p>Số Điện Thoại: 0396764757</p>
+                        <p>Email: nguyennhatminh26122001@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* kết thúc footer *@
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                let marginWithTop = $(window).scrollTop();
+                if (marginWithTop > 500) {
+                    $('.back-to-top').addClass('show-back-to-top');
+                }
+                else {
+                    $('.back-to-top').removeClass('show-back-to-top');
+                }
+            })
+            $('.back-to-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, '300')
+            })
+        })
+    </script>
+
+</body>
+</html>

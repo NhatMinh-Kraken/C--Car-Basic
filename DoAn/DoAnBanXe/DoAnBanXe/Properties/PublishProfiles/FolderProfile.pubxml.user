@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\DELL 7480\Desktop\Publish</_PublishTargetUrl>
+    <History>True|2021-07-18T13:37:36.1175410Z;True|2021-07-17T22:02:41.1465487+07:00;True|2021-07-17T09:22:11.9309958+07:00;True|2021-07-17T09:20:46.9945985+07:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Admin/Views/HomeAdmin/DonDatHang.cshtml">
+      <publishTime>07/16/2021 10:38:22</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HomeAdmin/Index.cshtml">
+      <publishTime>07/16/2021 10:36:45</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HomeAdmin/KhachHang.cshtml">
+      <publishTime>07/16/2021 10:36:34</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HomeAdmin/Login.cshtml">
+      <publishTime>07/16/2021 10:34:49</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HomeAdmin/Login1.cshtml">
+      <publishTime>07/16/2021 10:29:39</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HomeAdmin/LoginLogoutPartial.cshtml">
+      <publishTime>07/16/2021 10:37:33</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/Create.cshtml">
+      <publishTime>07/16/2021 10:47:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/CreateClass.cshtml">
+      <publishTime>07/16/2021 10:51:43</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/CreateDC.cshtml">
+      <publishTime>07/16/2021 11:01:12</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/CreateDH.cshtml">
+      <publishTime>07/16/2021 10:58:24</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/CreateDHDC.cshtml">
+      <publishTime>07/16/2021 11:08:18</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/CreatePK.cshtml">
+      <publishTime>07/16/2021 10:54:08</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/Delete.cshtml">
+      <publishTime>07/16/2021 10:49:43</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/DeleteClass.cshtml">
+      <publishTime>07/16/2021 10:52:54</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/DeleteDC.cshtml">
+      <publishTime>07/16/2021 11:03:24</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/DeleteDH.cshtml">
+      <publishTime>07/16/2021 10:59:12</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/DeleteDHDC.cshtml">
+      <publishTime>07/16/2021 11:06:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/DeletePK.cshtml">
+      <publishTime>07/16/2021 10:57:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/Detail.cshtml">
+      <publishTime>07/16/2021 10:49:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/DetailDC.cshtml">
+      <publishTime>07/16/2021 11:02:38</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/DetailsPK.cshtml">
+      <publishTime>07/16/2021 10:55:25</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/Edit.cshtml">
+      <publishTime>07/16/2021 10:50:27</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/EditDC.cshtml">
+      <publishTime>07/16/2021 11:04:39</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/EditDH.cshtml">
+      <publishTime>07/16/2021 10:59:58</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/EditDHDC.cshtml">
+      <publishTime>07/16/2021 11:07:12</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/EditPK.cshtml">
+      <publishTime>07/16/2021 10:57:49</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/GroupClass.cshtml">
+      <publishTime>07/16/2021 10:42:57</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/GroupPhuKien.cshtml">
+      <publishTime>07/16/2021 10:43:36</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Search/Search.cshtml">
+      <publishTime>07/16/2021 10:41:59</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_LayoutAdmin.cshtml">
+      <publishTime>07/16/2021 10:30:56</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/web.config">
+      <publishTime>06/29/2021 14:06:20</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Xe/Index.cshtml">
+      <publishTime>07/16/2021 11:13:44</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Xe/QLCLass.cshtml">
+      <publishTime>07/16/2021 11:14:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Xe/QLDCX.cshtml">
+      <publishTime>07/16/2021 11:22:15</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Xe/QLDH.cshtml">
+      <publishTime>07/16/2021 11:16:21</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Xe/QLDHDCX.cshtml">
+      <publishTime>07/16/2021 11:22:51</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Xe/QLPK.cshtml">
+      <publishTime>07/16/2021 11:15:29</publishTime>
+    </File>
+    <File Include="Areas/Script/JavaScriptThongBao.js">
+      <publishTime>06/29/2021 14:41:38</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/DoAnBanXe.dll">
+      <publishTime>07/18/2021 20:37:27</publishTime>
+    </File>
+    <File Include="bin/DoAnBanXe.pdb">
+      <publishTime>07/18/2021 20:37:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/22/2019 01:06:16</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>10/01/2013 00:36:38</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>10/01/2013 01:15:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>08/08/2018 12:18:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>08/08/2018 12:18:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>08/08/2018 12:09:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>12/05/2017 09:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>12/05/2017 09:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>11/05/2016 18:55:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>11/05/2016 18:55:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/16/2018 03:29:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>11/05/2016 18:55:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>11/05/2016 18:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>11/05/2016 18:55:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>11/05/2016 18:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>11/05/2016 18:56:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>11/05/2016 18:56:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>11/05/2016 18:56:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>11/05/2016 18:56:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/16/2018 03:29:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>11/05/2016 18:57:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>11/05/2016 18:57:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>11/05/2016 18:57:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>11/05/2016 18:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>11/05/2016 18:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>11/05/2016 18:57:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>11/05/2016 18:57:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>11/05/2016 18:57:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>11/05/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>11/05/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>11/05/2016 18:57:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>11/05/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>08/08/2018 12:18:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>08/08/2018 12:09:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/08/2018 12:18:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 13:57:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/Messenger.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/PagedList.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/phone.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/structure.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="Content/zalo.css">
+      <publishTime>07/16/2021 10:32:16</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/29/2021 13:26:32</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/29/2021 13:26:38</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/29/2021 13:26:38</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/29/2021 13:26:38</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/29/2021 13:26:38</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>06/29/2021 13:26:38</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/29/2021 13:26:32</publishTime>
+    </File>
+    <File Include="image/2 xe mec.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/arrow.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/backround.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/back_to_top.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner admin 6.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner Phu Kien 001 .png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner-4569.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner-mercedes-benz.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner-phukienoto.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner1.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner2.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner3.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/banner4.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/bannerTinTucKhuyenMai1.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/baoduong.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/baoduong1,2.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/baoduong2,1.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/baoduong2.bng.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bơm lốp ô tô, xe hơi mini Steelmate P05 tự ngắt.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bơm mini cầm tay đa năng chính hãng Xiaomi MJCQB01QJ.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bạt che, chắn nắng kính lái Ô tô, Xe hơi – Phủ bên ngoài.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bảng số điện thoại dùng trên xe hơi chính hãng Baseus Dual Number vỏ nhôm.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bọc vô lăng D Cut logo cờ Pháp vân Carbon cao cấp.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bọc vô lăng Sparco chính hãng SPC1109AZ.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bọc vô lăng Sparco chính hãng SPC1109GR.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bọc vô lăng Sparco chính hãng SPC1111GR.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bọc vô lăng Sparco chính hãng SPC1111RS.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bọc vô lăng Sparco chính hãng SPS100RD, SPS100BK.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bọc vô lăng Sparco chính hãng SPS1102BL.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ 2 mang cá giả hốc gió trang trí sườn xe Ô tô, xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ 4 rèm vải che nắng cửa kính Xe hơi, Ô tô.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ Logo 3D trang trí hông xe Mercedes biểu tượng bông lúa.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ Logo 3D trang trí hông xe VIP biểu tượng bông lúa.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ lót cốp và lưng ghế xe Mercedes C180, C200, C250, C300 thương hiệu Eudora CloudFoam.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ lót ghế, tựa lưng Massage hạt gỗ cho Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ tinh dầu khử mùi trên ô tô, xe hơi chính hãng Baseus.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ Ốp bậc cửa, Nẹp bước chân INOX Mercedes C180, C200, C250, C300 – Bên Trong.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ Ốp bậc cửa, Nẹp bước chân Titan Mercedes C180, C200, C250, C300 – Bên Trong.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ ốp bọc chân ga, chân phanh AMG cho xe Mercedes-Benz.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ ốp gương chiếu hậu Mercedes C Class C180, C200, C250, C300 đen bóng.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Bộ ốp hõm cửa xe Mercedes GLC200, GLC250, GLC300 mạ Crom.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Camera Hành Trình VAVA Dual Dash Cam VD002 – 2 mắt trước sau %28Tặng kèm thẻ nhớ 16Gb%29.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Camera hành trình Vietmap C61 – Ghi hình 4K %28Tặng kèm thẻ nhớ 32G%29.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Camera hành trình Vietmap iDVR P2 – Thiết kế gương tràn viền, định vị xe trực tuyến.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Camera hành trình Xiaomi 70mai A500s Dash Cam 2K7 – 2 mắt trước sau.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Camera hành trình Xiaomi 70mai A800 Dash Cam 4K – 2 mắt trước sau.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Camera hành trình Xiaomi 70mai A800S Dash Cam 4K – 2 mắt trước sau.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Chữ Sport kim loại 3D nổi dán trang trí Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Cảm biến áp suất lốp Fobo Tire – Van Ngoài.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Cảm biến áp suất lốp Steelmate E3 van trong.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Cảm biến áp suất lốp TPMS Steelmate E3W van ngoài.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Cảm biến áp suất lốp TPMS Steelmate TP-MT11 van trong.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Cảm biến áp suất lốp TPMS Steelmate TP-MT30 van trong tích hợp USB hiển thị trên màn hình Android.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Cảm biến áp suất lốp Xiaomi 70mai MiDrive T02 – Van ngoài.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/dauAMG.mp4">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/daudongcochinhhang.mp4">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/denphadenhau.mp4">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/dầu-nhớt-động-cơ-banner.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/GioHang1.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/honda.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/icon.ico">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/iemDangKyDichVu.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/image.MQ6.12.20210505045852.jpeg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/itemCamKet.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/itemCheDoBaoHanh.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Khay để đồ khe ghế Ô tô, xe hơi bọc da cao cấp.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/LocDau2.mp4">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/LocGio2.mp4">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Logo chữ DISCOVERY 3D nổi dán nắp Capo Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Logo chữ TITANIUM 3D nổi dán trang trí Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Logo chữ TRD 3D nổi dán trang trí Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Logo chữ TRD-Sport 3D nổi dán trang trí Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Logo chữ VVT-i 3D nổi dán trang trí Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/logo login.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/logo.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/logom.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/lái thử Mercedes-benz 2020.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Lót cốp da 6D Mercedes GLC %28GLC200, GLC250, GLC300%29 full thành.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Lót cốp Mercedes C180, C200, C250, C300 2015-2019 chất liệu TPO cao cấp.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/mercedes congty .png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-AMG CLA 45 4MATIC.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/mercedes-banner-1.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/mercedes-banner-2.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/mercedes-banner-3.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/mercedes-banner-4.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/mercedes-banner-5.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ C180 AMG.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ C200 EXCLUSIVE.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ C300 AMG.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ CLA 200.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ CLA 250 4MATIC.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ CLA 250.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ E 200 SPORT.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ E 200.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-benz E0 Exulusive.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ GLA 200.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ GLA 250 4MATIC.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-benz GLB.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-Benz GLC 200 4MATIC.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDES-BENZ GLC 200 FL 2021.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-Benz GLC 300 4MATIC.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-Benz GLS 2020.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-Benz GLS 450 4Matic.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-Benz S 450 L Luxury.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-Benz S 450 L.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-benz vn C 180 AMG mới.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-Benz vn E-class mới .png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/mercedes-gle-2019-ra-mat-2-1760.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Mercedes-Maybach GLS 600 4matic.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/MERCEDESS-BENZ CLA 250 4MATIC.png">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/messenger.svg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Màn hinh HUD Vietmap – H1x hiển thị thông tin OBD-II.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Màn hình HUD Vietmap H1AS dẫn đường, kết nối cảm biến Áp suất lốp TPMS van ngoài, hiển thị thông tin OBD-II.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Máy bơm lốp Xe hơi – Ô tô Chính hãng Xiaomi 70MAI Midrive TP01.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Máy bơm lốp Ô Tô, Xe hơi Xiaomi 70mai Midrive TP03.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Máy hút bụi Baseus Shark One H-505 Car Vacuum Cleaner không dây.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Máy khử mùi, lọc không khí trong Ô tô, Xe hơi Hyundai HY-12.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Máy lọc không khí, khử mùi xe hơi, ô tô Sharp IG-KC15.jpg">
+      <publishTime>07/16/2021 10:24:22</publishTime>
+    </File>
+    <File Include="image/Nước hoa cho Xe hơi, Ô tô cao cấp chính hãng Bugale Zero Gold.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Nước hoa cho Xe hơi, Ô tô cao cấp chính hãng Fresh Bottle Amber.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Nước hoa cho Xe hơi, Ô tô chính hãng Scentech Buckingham Plus hương Cà phê.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Nước hoa đồng hồ pha lê trang trí Taplo Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/phone.svg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/phutungvideoPhanh1.mp4">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/phutungvideoPhanh2.mp4">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/profile_user.png">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Tem chữ 4WD Fulltime 3D nổi dán trang trí Ô tô, Xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/thanhgatnuoc.mp4">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Thùng, hộp đựng đồ co giãn trên Ô tô, Xe hơi – thể tích 40L.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Thảm da Taplo Mercedes C180, C200, C250, C300 vân Carbon cao cấp.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Thảm sàn, lót sàn Da 6D cao cấp cho Mercedes GLC %28200, 250, 300%29.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Thảm sàn, lót sàn Mercedes GLC 200, GLC 250, GLC 300 thương hiệu Kata.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/tiemDichVuSuaChua.png">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Tượng Hổ vằn đính đá phong thủy trang trí Taplo Xe hơi, Ô tô.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Tượng Phật 3 mặt cầu tài, cầu bình an đặt Taplo Xe hơi, Ô tô.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Tượng Phật Di Lặc cầu tài, cầu bình an đặt Taplo Xe hơi, Ô tô.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Tấm dán chống bám nước, đọng nước gương chiếu hậu xe hơi.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Tẩu sạc ô tô Baseus 2 cổng sạc Type-C, USB 45W PPS Quick Changer.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/videoLocGio1.mp4">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/We test for your safety MercedesBenz GenuineParts  MercedesBenz original_1080p.mp4">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/xe-Mercedes-E300-AMG.png">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/zalo.svg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Ốp chống trầy cốp INOX Mercedes C180, C200, C250, C300 – Bên trong.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Ốp chống trầy cốp Titan Mercedes C180, C200, C250, C300 2016-2020 – Bên trong.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Ốp hõm cửa xe Mercedes GLC-Class %28GLC200, GLC250, GLC300%29 2016-2020 nhựa ABS vân Carbon cao cấp.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Ốp nội thất Mercedes C-Class C180, C200, C250, C300 vân Carbon cao cấp.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Ốp tay nắm cửa xe Mercedes C-Class %28C180, C200, C250, C300%29 2016-2020 nhựa ABS vân Carbon cao cấp.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Ốp tay nắm cửa xe Mercedes C180, C200, C250, C300 mạ Crom.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="image/Ốp tay nắm cửa xe Mercedes-Benz C-Class, GLC-Class 2016-2020 nhựa ABS vân Carbon cao cấp.jpg">
+      <publishTime>07/16/2021 10:24:23</publishTime>
+    </File>
+    <File Include="Models/dbXeMer.dbml">
+      <publishTime>07/18/2021 13:11:21</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/JavaScriptThongBao.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Scripts/ThongBao.js">
+      <publishTime>07/16/2021 10:32:46</publishTime>
+    </File>
+    <File Include="Views/GioHang/DatHang.cshtml">
+      <publishTime>07/16/2021 21:05:31</publishTime>
+    </File>
+    <File Include="Views/GioHang/GioHang.cshtml">
+      <publishTime>07/16/2021 21:03:48</publishTime>
+    </File>
+    <File Include="Views/GioHang/GioHangPartial.cshtml">
+      <publishTime>07/16/2021 21:04:45</publishTime>
+    </File>
+    <File Include="Views/Home/BaoDuongXechuyenNghiep.cshtml">
+      <publishTime>07/16/2021 20:39:28</publishTime>
+    </File>
+    <File Include="Views/Home/ChiTietPhuKien.cshtml">
+      <publishTime>07/16/2021 20:43:55</publishTime>
+    </File>
+    <File Include="Views/Home/ChiTietPhuKienXe.cshtml">
+      <publishTime>07/16/2021 20:47:50</publishTime>
+    </File>
+    <File Include="Views/Home/ChiTietXe.cshtml">
+      <publishTime>07/16/2021 20:40:45</publishTime>
+    </File>
+    <File Include="Views/Home/Dau.cshtml">
+      <publishTime>07/16/2021 20:39:56</publishTime>
+    </File>
+    <File Include="Views/Home/DoChoiTheoLoai.cshtml">
+      <publishTime>07/16/2021 20:47:27</publishTime>
+    </File>
+    <File Include="Views/Home/DoChoiXe.cshtml">
+      <publishTime>07/16/2021 20:46:11</publishTime>
+    </File>
+    <File Include="Views/Home/GioiThieu.cshtml">
+      <publishTime>07/16/2021 20:38:33</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>07/16/2021 21:10:25</publishTime>
+    </File>
+    <File Include="Views/Home/LoaiDoChoiPartial.cshtml">
+      <publishTime>07/16/2021 20:46:46</publishTime>
+    </File>
+    <File Include="Views/Home/LoginLogoutPartial.cshtml">
+      <publishTime>07/16/2021 20:45:15</publishTime>
+    </File>
+    <File Include="Views/Home/NavbarPartial.cshtml">
+      <publishTime>07/16/2021 20:41:24</publishTime>
+    </File>
+    <File Include="Views/Home/PhuKienPartial.cshtml">
+      <publishTime>07/16/2021 20:43:21</publishTime>
+    </File>
+    <File Include="Views/Home/PhuTung.cshtml">
+      <publishTime>07/16/2021 20:40:19</publishTime>
+    </File>
+    <File Include="Views/Home/SanPham.cshtml">
+      <publishTime>07/16/2021 20:44:35</publishTime>
+    </File>
+    <File Include="Views/Home/TinTucKhuyenMai.cshtml">
+      <publishTime>07/16/2021 20:39:00</publishTime>
+    </File>
+    <File Include="Views/Home/XeTheoClass.cshtml">
+      <publishTime>07/16/2021 20:42:35</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>06/29/2021 13:26:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutUser.cshtml">
+      <publishTime>07/16/2021 20:36:52</publishTime>
+    </File>
+    <File Include="Views/Use/LaiThu.cshtml">
+      <publishTime>07/16/2021 20:53:37</publishTime>
+    </File>
+    <File Include="Views/Use/PhanLoaiXePartial.cshtml">
+      <publishTime>07/16/2021 20:52:23</publishTime>
+    </File>
+    <File Include="Views/User/DangKy.cshtml">
+      <publishTime>07/16/2021 20:56:39</publishTime>
+    </File>
+    <File Include="Views/User/DangNhap.cshtml">
+      <publishTime>07/16/2021 20:55:39</publishTime>
+    </File>
+    <File Include="Views/UserKhachHang/CapNhatDonHang.cshtml">
+      <publishTime>07/16/2021 21:01:27</publishTime>
+    </File>
+    <File Include="Views/UserKhachHang/CapNhatThongTin.cshtml">
+      <publishTime>07/16/2021 21:00:27</publishTime>
+    </File>
+    <File Include="Views/UserKhachHang/Index.cshtml">
+      <publishTime>07/16/2021 20:58:57</publishTime>
+    </File>
+    <File Include="Views/UserKhachHang/Index1.cshtml">
+      <publishTime>07/16/2021 20:59:42</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>06/29/2021 13:26:32</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>07/16/2021 21:07:49</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/17/2021 22:02:39</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
